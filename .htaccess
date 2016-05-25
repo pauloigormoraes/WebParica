@@ -1,0 +1,22 @@
+#ErrorDocument 404 http://www.allexlima.com/NotFound
+
+<files ~ "^.*\.([Hh][Tt][Aa])">
+	order allow,deny
+	deny from all
+	satisfy all
+</files>
+
+<FilesMatch ".(php|htm|html|css|js)$">
+	AddDefaultCharset UTF-8
+</FilesMatch>
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+
+    #RewriteRule ^NotFound/?$ 404.html [NC,L]
+    RewriteRule ^request/([a-zA-z_]+)$ controller/request.php?action=$1 [NC,L]
+</IfModule>
+
+Options All -Indexes
