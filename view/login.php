@@ -16,13 +16,15 @@
 <![endif]-->
 
 </head>
-
-<body style="background-color: #91DC5A;">
+<body>
 	<div class="row">
-		<div class="col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2 col-md-4 col-md-offset-4">
-			<div class="login-panel panel panel-default">
-				<div class="panel-heading"><a style="color: #2B421B;">Sistema Acadêmico Administrativo - Paricá</a></div>
-				<div class="panel-body">
+		<div class="col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2 col-md-4 col-md-offset-4 ">
+			<div class="login-panel panel panel-default ">
+				<!-- <div class="panel-heading "><a style="color: #2B421B;">Sistema Acadêmico Administrativo - Paricá</a></div> -->
+				<div class="panel-body sombra">
+				<div align="center">
+				<h4 class="panel">SISTEMA ACADÊMICO | PARICÁ</h4>
+				</div>
 					<form role="form">
 						<fieldset>
 							<div class="form-group">
@@ -36,13 +38,13 @@
 									<input name="remember" type="checkbox" value="Salvar senha">Salvar senha
 								</label>
 							</div>
-							<a href="index.html" class="btn btn-primary">Entrar</a>
+							<a href="index.php" class="btn btn-primary">Entrar</a>
 						</fieldset>
 					</form>
 				</div>
 			</div>
-		</div><!-- /.col-->
-	</div><!-- /.row -->	
+		</div>
+	</div>
 
 	<script src="js/jquery-1.11.1.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>

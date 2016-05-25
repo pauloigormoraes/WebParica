@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>PARICÁ - Formulário</title>
+	<title>PARICÁ - Buscar aluno</title>
 	<link rel="shortout icon" href="img/favicon.png"/>
 
 	<link href="css/bootstrap.min.css" rel="stylesheet">
@@ -52,8 +52,7 @@
 		<li><a href="home.php"><svg class="glyph stroked home"><use xlink:href="#stroked-home"></use></svg> Início</a></li>
 		<li><a href="buscar.php"><svg class="glyph stroked table"><use xlink:href="#stroked-table"></use></svg> Buscar aluno</a></li>
 		<li><a href="declaracao.php"><svg class="glyph stroked table"><use xlink:href="#stroked-clipboard-with-paper"></use></svg> Declarações/Atas</a></li>
-		<li><a href="formulario.php"><svg class="glyph stroked pencil"><use xlink:href="#stroked-pencil"></use></svg> Cadastrar</a></li>
-
+		<li><a href="formulario.php"><svg class="glyph stroked pencil"><use xlink:href="#stroked-pencil"></use></svg> Matricular</a></li>
 		<li role="presentation" class="divider"></li>
 		<!--<li><a href="login.html"><svg class="glyph stroked male-user"><use xlink:href="#stroked-male-user"></use></svg> Login Page</a></li>-->
 	</ul>
@@ -64,13 +63,13 @@
 	<div class="row">
 		<ol class="breadcrumb">
 			<li><a href="#"><svg class="glyph stroked home"><use xlink:href="#stroked-home"></use></svg></a></li>
-			<li class="active">Matrícula</li>
+			<li class="active">Pesquisa</li>
 		</ol>
 	</div><!--/.row-->
 
 	<div class="row">
 		<div class="col-lg-12">
-			<h1 class="page-header">Matrícula do Aluno</h1>
+			<h1 class="page-header">Pesquisar Aluno</h1>
 		</div>
 	</div><!--/.row-->
 
@@ -88,22 +87,12 @@
 								<input class="form-control" type="text">
 							</div>
 
-							<div class="form-group col-md-3">
+							<div class="form-group col-md-4">
 								<label>CPF</label>
 								<input class="form-control" type="text">
 							</div>
 
-							<div class="form-group col-md-3">
-								<label>RG</label>
-								<input class="form-control" type="text">
-							</div>
-
-							<div class="form-group col-md-3">
-								<label>Orgão Expedidor</label>
-								<input class="form-control" type="text">
-							</div>
-
-							<div class="form-group col-md-3">
+							<div class="form-group col-md-4">
 								<label>Data de Nascimento</label>
 								<input class="form-control" type="date">
 							</div>
@@ -125,13 +114,8 @@
 							</div>
 
 							<div class="form-group col-md-4">
-								<label>E-mail</label>
-								<input class="form-control" type="email">
-							</div>
-
-							<div class="form-group col-md-4">
-								<label>Telefone <i style="font-size: 13px">(incluir DDD)</i></label>
-								<input class="form-control" type="tel">
+								<label>Matrícula do Aluno</label>
+								<input class="form-control" type="text">
 							</div>
 
 							<div class="form-group col-md-4">
@@ -144,21 +128,11 @@
 							</div>
 
 							<div class="form-group col-md-4">
-								<label>Endereço</label>
-								<input class="form-control" type="text">
-							</div>
-
-							<div class="form-group col-md-2">
-								<label>Nº</label>
-								<input class="form-control" type="number">
-							</div>
-
-							<div class="form-group col-md-3">
 								<label>Bairro</label>
 								<input class="form-control" type="text">
 							</div>
 
-							<div class="form-group col-md-3">
+							<div class="form-group col-md-4">
 								<label>Estado</label>
 								<select class="form-control">
 									<option>Selecione</option>
@@ -192,84 +166,29 @@
 								</select>
 							</div>
 
-							<div class="form-group col-md-12">
-								<label>Observação</label>
-								<textarea class="form-control" rows="5"></textarea>
-							</div>
 						</form>
 					</div>
 
 				</div>
 			</div>
-			<div class="panel panel-default">
-				<div class="panel-heading">Dados do Responsável</div>
-				<div class="panel-body">
-					<div class="col-md-12">
-						<form role="form">
 
-							<div class="form-group col-md-4">
-								<label>Nome</label>
-								<input class="form-control" type="text">
-							</div>
-
-							<div class="form-group col-md-4">
-								<label>CPF</label>
-								<input class="form-control" type="text">
-							</div>
-
-							<div class="form-group col-md-4">
-								<label>Gradu de Parentesco</label>
-								<select class="form-control">
-									<option>Selecione</option>
-									<option>Mãe</option>
-									<option>Pai</option>
-									<option>Avó/Avô</option>
-									<option>Tia/Tio</option>
-								</select>
-							</div>
-
-							<div class="form-group col-md-4">
-								<label>Nome</label>
-								<input class="form-control" type="text">
-							</div>
-
-							<div class="form-group col-md-4">
-								<label>CPF</label>
-								<input class="form-control" type="text">
-							</div>
-
-							<div class="form-group col-md-4">
-								<label>Gradu de Parentesco</label>
-								<select class="form-control">
-									<option>Selecione</option>
-									<option>Mãe</option>
-									<option>Pai</option>
-									<option>Avó/Avô</option>
-									<option>Tia/Tio</option>
-								</select>
-							</div>
-						</form>
-					</div>
-
-				</div>
-			</div>
 			<div class="panel panel-default">
 				<div class="panel-heading">Dados Acadêmicos</div>
 				<div class="panel-body">
 					<div class="col-md-12">
 						<form role="form">
 
-							<div class="form-group col-md-4">
+							<div class="form-group col-md-6">
 								<label>Turma</label>
 								<input class="form-control" type="text">
 							</div>
 
-							<div class="form-group col-md-4">
+							<div class="form-group col-md-6">
 								<label>Turno</label>
 								<input class="form-control" type="text">
 							</div>
 
-							<div class="form-group col-md-4">
+							<div class="form-group col-md-6">
 								<label>Ano/Serie</label>
 								<select class="form-control">
 									<option>Selecione</option>
@@ -286,11 +205,6 @@
 									<option>2º Ano/Médio</option>
 									<option>3º Ano/Médio</option>
 								</select>
-							</div>
-
-							<div class="form-group col-md-6">
-								<label>Escola</label>
-								<input class="form-control" type="text">
 							</div>
 
 							<div class="form-group col-md-6">
@@ -314,13 +228,8 @@
 							</div>
 							</div>
 
-							<div class="form-group col-md-12">
-								<label>Observação</label>
-								<textarea class="form-control" rows="5"></textarea>
-							</div>
-
-							<button type="submit" class="btn btn-primary">Confirmar</button>
-							<button type="reset" class="btn btn-default">Desfazer</button>
+							<button type="submit" class="btn btn-primary">Pesquisar</button>
+							<button type="reset" class="btn btn-default">Exportar</button>
 						</form>
 					</div>
 

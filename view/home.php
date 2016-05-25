@@ -35,66 +35,27 @@
 					<li class="dropdown pull-right">
 						<a href="#" class="dropdown-toggle" data-toggle="dropdown"><svg class="glyph stroked male-user"><use xlink:href="#stroked-male-user"></use></svg> Usuário <span class="caret"></span></a>
 						<ul class="dropdown-menu" role="menu">
-							<li><a href="#"><svg class="glyph stroked male-user"><use xlink:href="#stroked-male-user"></use></svg> Perfil</a></li>
-							<!--<li><a href="#"><svg class="glyph stroked gear"><use xlink:href="#stroked-gear"></use></svg> Settings</a></li>-->
 							<li><a href="#"><svg class="glyph stroked cancel"><use xlink:href="#stroked-cancel"></use></svg> Sair</a></li>
 						</ul>
 					</li>
 				</ul>
 			</div>
 							
-		</div><!-- /.container-fluid -->
+		</div>
 	</nav>
 		
 	<div id="sidebar-collapse" class="col-sm-3 col-lg-2 sidebar">
 
 		<ul class="nav menu">
-			<li class="active"><a href="index.html"><svg class="glyph stroked dashboard-dial"><use xlink:href="#stroked-dashboard-dial"></use></svg> Início</a></li>
-			<li><a href=""><svg class="glyph stroked table"><use xlink:href="#stroked-table"></use></svg> Buscar aluno</a></li>
-			<li><a href=""><svg class="glyph stroked pencil"><use xlink:href="#stroked-pencil"></use></svg> Cadastrar</a></li>
+			<li><a href="home.php"><svg class="glyph stroked home"><use xlink:href="#stroked-home"></use></svg> Início</a></li>
+			<li><a href="buscar.php"><svg class="glyph stroked table"><use xlink:href="#stroked-table"></use></svg> Buscar aluno</a></li>
+			<li><a href="declaracao.php"><svg class="glyph stroked table"><use xlink:href="#stroked-clipboard-with-paper"></use></svg> Declarações/Atas</a></li>
+			<li><a href="formulario.php"><svg class="glyph stroked pencil"><use xlink:href="#stroked-pencil"></use></svg> Matricular</a></li>
 
-			<li class="parent ">
-				<a href="#">
-					<span data-toggle="collapse" href="#sub-item-1"><svg class="glyph stroked chevron-down"><use xlink:href="#stroked-chevron-down"></use></svg></span> Declarações em Geral
-				</a>
-				<ul class="children collapse" id="sub-item-1">
-					<li>
-						<a class="" href="#">
-							<svg class="glyph stroked chevron-right"><use xlink:href="#stroked-chevron-right"></use></svg> Transferência
-						</a>
-					</li>
-					<li>
-						<a class="" href="#">
-							<svg class="glyph stroked chevron-right"><use xlink:href="#stroked-chevron-right"></use></svg> Comp. de Matrícula
-						</a>
-					</li>
-					<li>
-						<a class="" href="#">
-							<svg class="glyph stroked chevron-right"><use xlink:href="#stroked-chevron-right"></use></svg> Boletim
-						</a>
-					</li>
-					<li>
-						<a class="" href="#">
-							<svg class="glyph stroked chevron-right"><use xlink:href="#stroked-chevron-right"></use></svg> Situação do Aluno
-						</a>
-					</li>
-					<li>
-						<a class="" href="#">
-							<svg class="glyph stroked chevron-right"><use xlink:href="#stroked-chevron-right"></use></svg> Ata de Reunião
-						</a>
-					</li>
-					<li>
-						<a class="" href="#">
-							<svg class="glyph stroked chevron-right"><use xlink:href="#stroked-chevron-right"></use></svg> Faltas
-						</a>
-					</li>
-				</ul>
-			</li>
 			<li role="presentation" class="divider"></li>
-			<!--<li><a href="login.html"><svg class="glyph stroked male-user"><use xlink:href="#stroked-male-user"></use></svg> Login Page</a></li>-->
 		</ul>
 
-	</div><!--/.sidebar-->
+	</div>
 		
 	<div class="col-sm-9 col-sm-offset-3 col-lg-10 col-lg-offset-2 main">			
 		<div class="row">
@@ -102,22 +63,22 @@
 				<li><a href="#"><svg class="glyph stroked home"><use xlink:href="#stroked-home"></use></svg></a></li>
 				<li class="active">Início</li>
 			</ol>
-		</div><!--/.row-->
+		</div>
 		
 		<div class="row">
 			<div class="col-lg-12">
-				<h1 class="page-header">Declarações</h1>
+				<h1 class="page-header">Bem vindo ao PARICÁ</h1>
 			</div>
-		</div><!--/.row-->
+		</div>
 		
 		<div class="row">
 			<div class="col-xs-12 col-md-6 col-lg-6">
 				<div class="panel panel-green panel-widget ">
 					<div class="row no-padding">
 						<div class="col-sm-3 col-lg-5 widget-left">
-							<svg class="glyph stroked bag"><use xlink:href="#stroked-blank-document"></use></svg>
+							<svg class="glyph stroked bag"><use xlink:href="#stroked-plus-sign"></use></svg>
 						</div>
-						<a href="forms.html">
+						<a href="formulario.html">
 							<div class="col-sm-9 col-lg-7 widget-right">
 								<div class="large">Cadastrar</div>
 								<div class="text-muted">novo aluno</div>
@@ -130,11 +91,11 @@
 				<div class="panel panel-green panel-widget ">
 					<div class="row no-padding">
 						<div class="col-sm-3 col-lg-5 widget-left">
-						<svg class="glyph stroked bag"><use xlink:href="#stroked-blank-document"></use></svg>
+						<svg class="glyph stroked bag"><use xlink:href="#stroked-clipboard-with-paper"></use></svg>
 						</div>
-						<a href="forms.html">
+						<a href="buscar.html">
 						<div class="col-sm-9 col-lg-7 widget-right">
-							<div class="large">Listar</div>
+							<div class="large">Buscar</div>
 							<div class="text-muted">aluno</div>
 						</div>
 						</a>
@@ -147,10 +108,10 @@
 						<div class="col-sm-3 col-lg-5 widget-left">
 							<svg class="glyph stroked bag"><use xlink:href="#stroked-blank-document"></use></svg>
 						</div>
-						<a href="forms.html">
+						<a href="#">
 							<div class="col-sm-9 col-lg-7 widget-right">
-								<div class="large">Transferência</div>
-								<div class="text-muted">do aluno</div>
+								<div class="large">Ata de Reunião</div>
+								<div class="text-muted">professores</div>
 							</div>
 						</a>
 					</div>
@@ -162,18 +123,18 @@
 						<div class="col-sm-3 col-lg-5 widget-left">
 							<svg class="glyph stroked bag"><use xlink:href="#stroked-blank-document"></use></svg>
 						</div>
-						<a href="forms.html">
+						<a href="#">
 							<div class="col-sm-9 col-lg-7 widget-right">
-								<div class="large">Situação</div>
-								<div class="text-muted">do aluno</div>
+								<div class="large">Ata de Reunião</div>
+								<div class="text-muted">coordenação</div>
 							</div>
 						</a>
 					</div>
 				</div>
 			</div>
 		</div>
-	</div><!--/.row-->
-	</div>	<!--/.main-->
+	</div>
+	</div>
 
 	<script src="js/jquery-1.11.1.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>
