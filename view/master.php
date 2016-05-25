@@ -4,18 +4,18 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>PARICÁ - Início</title>
-    <link rel="shortout icon" href="img/favicon.png"/>
+    <link rel="shortout icon" href="view/img/favicon.png"/>
 
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/datepicker3.css" rel="stylesheet">
-    <link href="css/styles.css" rel="stylesheet">
+    <link href="view/css/bootstrap.min.css" rel="stylesheet">
+    <link href="view/css/datepicker3.css" rel="stylesheet">
+    <link href="view/css/styles.css" rel="stylesheet">
 
     <!--Icons-->
-    <script src="js/lumino.glyphs.js"></script>
+    <script src="view/js/lumino.glyphs.js"></script>
 
     <!--[if lt IE 9]>
-    <script src="js/html5shiv.js"></script>
-    <script src="js/respond.min.js"></script>
+    <script src="view/js/html5shiv.js"></script>
+    <script src="view/js/respond.min.js"></script>
     <![endif]-->
 
 </head>
@@ -31,14 +31,6 @@
                 <span class="icon-bar"></span>
             </button>
             <a class="navbar-brand" href="home.php"><span>PARICÁ </span>ACADÊMICO</a>
-            <ul class="user-menu">
-<!--                <li class="dropdown pull-right">-->
-<!--                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><svg class="glyph stroked male-user"><use xlink:href="#stroked-male-user"></use></svg> Usuário <span class="caret"></span></a>-->
-<!--                    <ul class="dropdown-menu" role="menu">-->
-<!--                        <li><a href="#"><svg class="glyph stroked cancel"><use xlink:href="#stroked-cancel"></use></svg> Sair</a></li>-->
-<!--                    </ul>-->
-<!--                </li>-->
-            </ul>
         </div>
 
     </div>
@@ -47,12 +39,11 @@
 <div id="sidebar-collapse" class="col-sm-3 col-lg-2 sidebar">
 
     <ul class="nav menu">
-        <li><a href="home.php"><svg class="glyph stroked home"><use xlink:href="#stroked-home"></use></svg> Início</a></li>
-        <li><a href="master.php"><svg class="glyph stroked home"><use xlink:href="#stroked-home"></use></svg> Início</a></li>
-        <li><a href="buscar.php"><svg class="glyph stroked table"><use xlink:href="#stroked-table"></use></svg> Buscar aluno</a></li>
-        <li><a href="declaracao.php"><svg class="glyph stroked table"><use xlink:href="#stroked-clipboard-with-paper"></use></svg> Declarações/Atas</a></li>
-        <li><a href="formulario.php"><svg class="glyph stroked pencil"><use xlink:href="#stroked-pencil"></use></svg> Matricular</a></li>
-
+        <li><a href="#home"><svg class="glyph stroked home"><use xlink:href="#stroked-home"></use></svg> Início</a></li>
+        <li><a href="#link"><svg class="glyph stroked home"><use xlink:href="#stroked-home"></use></svg> Início</a></li>
+        <li><a href="#link"><svg class="glyph stroked table"><use xlink:href="#stroked-table"></use></svg> Buscar aluno</a></li>
+        <li><a href="#link"><svg class="glyph stroked table"><use xlink:href="#stroked-clipboard-with-paper"></use></svg> Declarações/Atas</a></li>
+        <li><a href="#link"><svg class="glyph stroked pencil"><use xlink:href="#stroked-pencil"></use></svg> Matricular</a></li>
         <li role="presentation" class="divider"></li>
     </ul>
 
@@ -63,13 +54,13 @@
 
 </div>
 
-<script src="js/jquery-1.11.1.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<script src="js/chart.min.js"></script>
-<script src="js/chart-data.js"></script>
-<script src="js/easypiechart.js"></script>
-<script src="js/easypiechart-data.js"></script>
-<script src="js/bootstrap-datepicker.js"></script>
+<script src="view/js/jquery-1.11.1.min.js"></script>
+<script src="view/js/bootstrap.min.js"></script>
+<script src="view/js/chart.min.js"></script>
+<script src="view/js/chart-data.js"></script>
+<script src="view/js/easypiechart.js"></script>
+<script src="view/js/easypiechart-data.js"></script>
+<script src="view/js/bootstrap-datepicker.js"></script>
 <script>
     $('#calendar').datepicker({
     });
