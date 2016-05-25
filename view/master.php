@@ -40,17 +40,15 @@
 
     <ul class="nav menu">
         <li><a href="#home"><svg class="glyph stroked home"><use xlink:href="#stroked-home"></use></svg> Início</a></li>
-        <li><a href="#link"><svg class="glyph stroked home"><use xlink:href="#stroked-home"></use></svg> Início</a></li>
-        <li><a href="#link"><svg class="glyph stroked table"><use xlink:href="#stroked-table"></use></svg> Buscar aluno</a></li>
-        <li><a href="#link"><svg class="glyph stroked table"><use xlink:href="#stroked-clipboard-with-paper"></use></svg> Declarações/Atas</a></li>
-        <li><a href="#link"><svg class="glyph stroked pencil"><use xlink:href="#stroked-pencil"></use></svg> Matricular</a></li>
+        <li><a href="#buscar"><svg class="glyph stroked table"><use xlink:href="#stroked-table"></use></svg> Buscar aluno</a></li>
+        <li><a href="#declaracao"><svg class="glyph stroked table"><use xlink:href="#stroked-clipboard-with-paper"></use></svg> Declarações/Atas</a></li>
+        <li><a href="#formulario"><svg class="glyph stroked pencil"><use xlink:href="#stroked-pencil"></use></svg> Matricular</a></li>
         <li role="presentation" class="divider"></li>
     </ul>
 
 </div>
 
-<div class="col-sm-9 col-sm-offset-3 col-lg-10 col-lg-offset-2 main">
-
+<div class="col-sm-9 col-sm-offset-3 col-lg-10 col-lg-offset-2 main" id="MainFrame">
 
 </div>
 
@@ -61,9 +59,9 @@
 <script src="view/js/easypiechart.js"></script>
 <script src="view/js/easypiechart-data.js"></script>
 <script src="view/js/bootstrap-datepicker.js"></script>
+<script src="view/js/javex.js"></script>
+
 <script>
-    $('#calendar').datepicker({
-    });
 
     !function ($) {
         $(document).on("click","ul.nav li.parent > a > span.icon", function(){
