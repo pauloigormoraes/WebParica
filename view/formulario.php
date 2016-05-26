@@ -25,7 +25,7 @@
 
 						<div class="form-group col-md-3">
 							<label>CPF</label>
-							<input name="cpf_aluno" class="form-control" type="number" placeholder="Somente números" required>
+							<input name="cpf_aluno"  class="form-control" type="number" placeholder="Somente números" required>
 						</div>
 
 						<div class="form-group col-md-3">

@@ -11,13 +11,13 @@ class request extends ajax{
             header("HTTP/1.0 404 Not Found");
             die("-2");
         }else{
-            $this->json = json_decode(json_encode(base64_decode($data)));
+            $this->json = json_decode(json_encode($data));;
             $this->$action();
         }
     }
 }
 
 session_start();
-new request($_GET['action'], $_POST['data']);
+new request($_GET['action'], $_POST);
 
 ?>
