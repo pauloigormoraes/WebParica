@@ -6,7 +6,7 @@
 </div>
 
 <div class="row" style="text-align: center;">
-	<div class="col-lg-12" style="margin-top: 50px">
+	<div class="col-lg-12" style="margin-top: 120px">
 		<img src='view/img/leafa.png'>
 		<h1 class="page-header" style="color: #91DC5A !important;">Bem vindo(a) ao Sistema Acadêmico - PARICÁ</h1>
 	</div>
