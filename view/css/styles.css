@@ -381,8 +381,22 @@ a.bg-danger:hover {
 	height: 80px;
 	padding-top: 15px;
 	text-align: center;
-	border-top-left-radius: 4px;
-	border-bottom-left-radius: 4px;
+	border-top-left-radius: 5px;
+	border-bottom-left-radius: 5px;
+	/*border-bottom-right-radius: 10px;*/
+	/*border-top-right-radius: 10px;*/
+}
+
+.index {
+	/*background-color: #91DC5A;*/
+	background-color: #fff;
+	height: 280px;
+	width: 290px;
+	margin: 50px auto;
+	text-align: center;
+	border-radius: 5%;
+	/*text-shadow: 50px 50px 50px #91DC5A;*/
+	box-shadow: 10px 10px 100px #91DC5A;
 }
 
 .widget-right {
@@ -412,8 +426,8 @@ a.bg-danger:hover {
 
 @media (max-width: 768px) {
 	.widget-left {
-	border-top-left-radius: 4px;
-	border-top-right-radius: 4px;
+	border-top-left-radius: 400px;
+	border-top-right-radius: 400px;
 	border-bottom-left-radius: 0px;
 	border-bottom-right-radius: 0px;
 	}
