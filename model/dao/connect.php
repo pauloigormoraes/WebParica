@@ -26,6 +26,12 @@ class connect{
         $this->host = $host;
         $this->schema = $schema;
     }
+
+    public function readQuery($filename){
+        $base = "../model/sql/";
+        return file_get_contents($base.$filename.".sql");
+    }
+
 }
 
 ?>
