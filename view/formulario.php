@@ -22,116 +22,117 @@
 
 						<div class="form-group col-md-12">
 							<label>Nome do aluno</label>
-							<input class="form-control" type="text">
+							<input name="nome_aluno" class="form-control" type="text">
 						</div>
 
 						<div class="form-group col-md-3">
 							<label>CPF</label>
-							<input class="form-control" type="text">
+							<input name="cpf" class="form-control" type="text">
 						</div>
 
 						<div class="form-group col-md-3">
 							<label>RG</label>
-							<input class="form-control" type="text">
+							<input name="rg" class="form-control" type="text">
 						</div>
 
 						<div class="form-group col-md-3">
 							<label>Orgão Expedidor</label>
-							<input class="form-control" type="text">
+							<input name="orgao_exp" class="form-control" type="text">
 						</div>
 
 						<div class="form-group col-md-3">
 							<label>Data de Nascimento</label>
-							<input class="form-control" type="date">
+							<input name="data_nasc" class="form-control" type="date">
 						</div>
 
 						<div class="form-group col-md-4">
 							<label>Estado Civil</label>
-							<select class="form-control">
-								<option>Selecione</option>
-								<option>Solteiro</option>
-								<option>Casado</option>
-								<option>Divorciado</option>
-								<option>Viúvo</option>
+							<select name="estado_civ" class="form-control">
+								<option value="" disabled selected>Selecione</option>
+								<option value="0">Solteiro</option>
+								<option value="1">Casado</option>
+								<option value="2">Divorciado</option>
+								<option value="3">Viúvo</option>
+								<option value="4">Estável</option>
 							</select>
 						</div>
 
 						<div class="form-group col-md-8">
 							<label>Certidão de Nascimento</label>
-							<input class="form-control" type="text">
+							<input name="certidao_nasc" class="form-control" type="text">
 						</div>
 
 						<div class="form-group col-md-4">
 							<label>E-mail</label>
-							<input class="form-control" type="email">
+							<input name="email" class="form-control" type="email">
 						</div>
 
 						<div class="form-group col-md-4">
 							<label>Telefone <i style="font-size: 13px">(incluir DDD)</i></label>
-							<input class="form-control" type="tel">
+							<input name="telefone" class="form-control" type="tel">
 						</div>
 
 						<div class="form-group col-md-4">
 							<label>PcD</label>
-							<select class="form-control">
-								<option>Selecione</option>
-								<option>Sim</option>
-								<option>Não</option>
+							<select name="pcd" class="form-control">
+								<option value="" disabled selected>Selecione</option>
+								<option value="0">Sim</option>
+								<option value="1">Não</option>
 							</select>
 						</div>
 
 						<div class="form-group col-md-4">
 							<label>Endereço</label>
-							<input class="form-control" type="text">
+							<input name="endereco" class="form-control" type="text">
 						</div>
 
 						<div class="form-group col-md-2">
 							<label>Nº</label>
-							<input class="form-control" type="number">
+							<input name="num_casa" class="form-control" type="number">
 						</div>
 
 						<div class="form-group col-md-3">
 							<label>Bairro</label>
-							<input class="form-control" type="text">
+							<input name="bairro" class="form-control" type="text">
 						</div>
 
 						<div class="form-group col-md-3">
 							<label>Estado</label>
-							<select class="form-control">
-								<option>Selecione</option>
-								<option>Acre</option>
-								<option>Alagoas</option>
-								<option>Amapá</option>
-								<option>Amazonas</option>
-								<option>Bahia</option>
-								<option>Ceará</option>
-								<option>Distrito Federal</option>
-								<option>Espírito Santo</option>
-								<option>Goiás</option>
-								<option>Maranhão</option>
-								<option>Mato Grosso</option>
-								<option>Mato Grosso do Sul</option>
-								<option>Minas Gerais</option>
-								<option>Pará</option>
-								<option>Paraíba</option>
-								<option>Paraná</option>
-								<option>Pernambuco</option>
-								<option>Piauí</option>
-								<option>Rio de Janeiro</option>
-								<option>Rio Grande do Norte</option>
-								<option>Rio Grande do Sul</option>
-								<option>Rondônia</option>
-								<option>Roraima</option>
-								<option>Santa Catarina</option>
-								<option>São Paulo</option>
-								<option>Sergipe</option>
-								<option>Tocantins</option>
+							<select name="estado" class="form-control">
+								<option value="" disabled selected>Selecione</option>
+								<option value="AC">Acre</option>
+								<option value="AL">Alagoas</option>
+								<option value="AP">Amapá</option>
+								<option value="AM">Amazonas</option>
+								<option value="BA">Bahia</option>
+								<option value="CE">Ceará</option>
+								<option value="DF">Distrito Federal</option>
+								<option value="ES">Espírito Santo</option>
+								<option value="GO">Goiás</option>
+								<option value="MA">Maranhão</option>
+								<option value="MT">Mato Grosso</option>
+								<option value="MS">Mato Grosso do Sul</option>
+								<option value="MG">Minas Gerais</option>
+								<option value="PA">Pará</option>
+								<option value="PB">Paraíba</option>
+								<option value="PR">Paraná</option>
+								<option value="PE">Pernambuco</option>
+								<option value="PI">Piauí</option>
+								<option value="RJ">Rio de Janeiro</option>
+								<option value="RN">Rio Grande do Norte</option>
+								<option value="RS">Rio Grande do Sul</option>
+								<option value="RO">Rondônia</option>
+								<option value="RR">Roraima</option>
+								<option value="SC">Santa Catarina</option>
+								<option value="SP">São Paulo</option>
+								<option value="SE">Sergipe</option>
+								<option value="TO">Tocantins</option>
 							</select>
 						</div>
 
 						<div class="form-group col-md-12">
 							<label>Observação</label>
-							<textarea class="form-control" rows="5"></textarea>
+							<textarea name="obeservacao" class="form-control" rows="5"></textarea>
 						</div>
 					</form>
 				</div>
@@ -146,12 +147,12 @@
 
 						<div class="form-group col-md-4">
 							<label>Nome</label>
-							<input class="form-control" type="text">
+							<input name="nome_mae" class="form-control" type="text">
 						</div>
 
 						<div class="form-group col-md-4">
 							<label>CPF</label>
-							<input class="form-control" type="text">
+							<input name="cpf_mae" class="form-control" type="text">
 						</div>
 
 						<div class="form-group col-md-4">
@@ -167,16 +168,16 @@
 
 						<div class="form-group col-md-4">
 							<label>Nome</label>
-							<input class="form-control" type="text">
+							<input name="nome_pai" class="form-control" type="text">
 						</div>
 
 						<div class="form-group col-md-4">
 							<label>CPF</label>
-							<input class="form-control" type="text">
+							<input name="cpf_pai" class="form-control" type="text">
 						</div>
 
 						<div class="form-group col-md-4">
-							<label>Gradu de Parentesco</label>
+							<label>Grau de Parentesco</label>
 							<select class="form-control">
 								<option>Selecione</option>
 								<option>Mãe</option>
@@ -198,62 +199,62 @@
 
 						<div class="form-group col-md-4">
 							<label>Turma</label>
-							<input class="form-control" type="text">
+							<input name="turma" class="form-control" type="text">
 						</div>
 
 						<div class="form-group col-md-4">
 							<label>Turno</label>
-							<input class="form-control" type="text">
+							<input name="turno" class="form-control" type="text">
 						</div>
 
 						<div class="form-group col-md-4">
 							<label>Ano/Serie</label>
-							<select class="form-control">
-								<option>Selecione</option>
-								<option>1º Ano</option>
-								<option>2º Ano</option>
-								<option>3º Ano</option>
-								<option>4º Ano</option>
-								<option>5º Ano</option>
-								<option>6º Ano</option>
-								<option>7º Ano</option>
-								<option>8º Ano</option>
-								<option>9º Ano</option>
-								<option>1º Ano/Médio</option>
-								<option>2º Ano/Médio</option>
-								<option>3º Ano/Médio</option>
+							<select name="ano_serie" class="form-control">
+								<option value="" disabled selected>Selecione</option>
+								<option value="0">1º Ano</option>
+								<option value="1">2º Ano</option>
+								<option value="2">3º Ano</option>
+								<option value="3">4º Ano</option>
+								<option value="4">5º Ano</option>
+								<option value="5">6º Ano</option>
+								<option value="6">7º Ano</option>
+								<option value="7">8º Ano</option>
+								<option value="8">9º Ano</option>
+								<option value="9">1º Ano/Médio</option>
+								<option value="10">2º Ano/Médio</option>
+								<option value="11">3º Ano/Médio</option>
 							</select>
 						</div>
 
 						<div class="form-group col-md-6">
 							<label>Escola</label>
-							<input class="form-control" type="text">
+							<input name="escola" disabled selected value="ESCOLA PROFESSOR CICERO MONTEIRO" class="form-control" type="text">
 						</div>
 
 						<div class="form-group col-md-6">
 							<label>Situação</label>
-							<div class="radio">
+							<div name="situacao" class="radio">
 								<label>
-									<input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>  Novo
+									<input value="0" type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>  Novo
 								</label>
 
 								<label>
-									<input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">  Transferido
+									<input value="1" type="radio" name="optionsRadios" id="optionsRadios2" value="option2">  Transferido
 								</label>
 
 								<label>
-									<input type="radio" name="optionsRadios" id="optionsRadios3" value="option3">  Desistente
+									<input value="2" type="radio" name="optionsRadios" id="optionsRadios3" value="option3">  Desistente
 								</label>
 
 								<label>
-									<input type="radio" name="optionsRadios" id="optionsRadios3" value="option3">  Repetente
+									<input value="3" type="radio" name="optionsRadios" id="optionsRadios3" value="option3">  Repetente
 								</label>
 							</div>
 						</div>
 
 						<div class="form-group col-md-12">
 							<label>Observação</label>
-							<textarea class="form-control" rows="5"></textarea>
+							<textarea name="observacao_doiss" class="form-control" rows="5"></textarea>
 						</div>
 
 						<button type="submit" class="btn btn-primary">Confirmar</button>

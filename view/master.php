@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>PARICÁ - Início</title>
+    <title>PARICÁ - Sistema Acadêmico</title>
     <link rel="shortout icon" href="view/img/favicon.png"/>
 
     <link href="view/css/bootstrap.min.css" rel="stylesheet">
