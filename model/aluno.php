@@ -22,6 +22,11 @@ class aluno{
     private $al_dt_matricula;
     private $al_ct_id;
     private $turma_tu_id;
+    private $al_orgExp;
+    private $al_situacao;
+    private $al_estadoCivil;
+
+
 
     public function setId($id){
         $this->al_id = $id;
@@ -103,6 +108,18 @@ class aluno{
         $this->turma_tu_id = $id;
         return $this;
     }
+    public function setOrgaoExpedidor($orgao){
+        $this->al_orgExp = $orgao;
+        return $this;
+    }
+    public function setSituacaoAluno($situacao){
+        $this->al_situacao = $situacao;
+        return $this;
+    }
+    public function setEstadoCivil($estadocivil){
+        $this->al_estadoCivil = $estadocivil;
+        return $this;
+    }
 
     public function getId(){
         return $this->al_id;
@@ -164,6 +181,16 @@ class aluno{
     public function getTurmaId(){
         return $this->turma_tu_id;
     }
+    public function getOrgaoExpedidor(){
+        return $this->al_orgExp;
+    }
+    public function getSituacaoAluno(){
+        return $this->al_situacao;
+    }
+    public function getEstadoCivil(){
+        return $this->al_estadoCivil;
+    }
+
 }
 
 ?>
