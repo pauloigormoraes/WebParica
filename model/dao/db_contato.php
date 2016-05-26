@@ -15,7 +15,7 @@ class db_contato extends connect{
     public function insert(){
         $this->query = $this->readQuery("insertContato");
         $this->MySql->beginTransaction();
-        try {
+        /*try {
             $sql = $this->MySql->prepare($this->query);
             $sql->bindValue(":ct_lagradouro", $this->model->getLagradouro());
             $sql->bindValue(":ct_numero", $this->model->getNumero());
@@ -31,7 +31,7 @@ class db_contato extends connect{
             print 1;
         } catch (Exception $e) {
             print $e->getMessage();
-        }
+        }*/
     }
 }
 

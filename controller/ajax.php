@@ -7,7 +7,7 @@ include "../model/dao/db_aluno.php";
 class ajax{
     protected $json;
 
-    protected function cadastrarAlunos(){
+    protected function cadastrarContato(){
         $dados = $this->json;
         $db = new db_contato();
         $model = $db->model;
@@ -24,7 +24,7 @@ class ajax{
         $db->insert();
     }
 
-    protected function cadastrarContato(){
+    protected function cadastrarAlunos(){
         
         $dados = $this->json;
         $db = new db_aluno();
@@ -52,6 +52,10 @@ class ajax{
         $model->setEstadoCivil($dados->estadoCivil);
 
         print $db->insert();
+    }
+
+    protected function buscarAluno() {
+
     }
 }
 

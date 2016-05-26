@@ -14,7 +14,6 @@ $(window).ready(function(){
             case 'formulario':
                 showPage(link, function(){
                     $("#inserirAlunos").submit(function(){
-                        
                         $.post("./request/cadastrarAlunos", $(this).serialize(), function(info){
                             alert(info);
                         });
