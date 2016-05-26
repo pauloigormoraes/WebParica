@@ -28,8 +28,8 @@
 							<label>Colaborador</label>
 							<select name="mat_colaborador" class="form-control">
 								<option value="" disabled selected>Selecione</option>
-								<option value="0">Rodrigo e</option>
-								<option value="1">Paulo</option>
+								<option value="0">Opcao</option>
+								<option value="1">Opcao</option>
 								<option value="2">Colocar nome do professor</option>
 							</select>
 						</div>

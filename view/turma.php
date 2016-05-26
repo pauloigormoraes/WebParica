@@ -28,8 +28,8 @@
 							<label>Turno</label>
 							<select name="turma_turno" class="form-control">
 								<option value="" disabled selected>Selecione</option>
-								<option value="0">Rodrigo e</option>
-								<option value="1">Paulo</option>
+								<option value="0">Opcao</option>
+								<option value="1">opcao</option>
 								<option value="2">Colocar nome o turno</option>
 							</select>
 						</div>
