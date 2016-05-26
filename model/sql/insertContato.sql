@@ -1,0 +1,19 @@
+INSERT INTO parica_db.contato(
+	ct_lagradouro,
+	ct_numero,
+	ct_bairro,
+	ct_cidade,
+	ct_estado,
+	ct_email,
+	ct_tel_1,
+	ct_tel_2	
+)VALUES(
+	:lagradouro,
+	:numero,
+	:bairro,
+	:cidade,
+	:estado,
+	:email,
+	:tel_1,
+	:tel_2		
+)

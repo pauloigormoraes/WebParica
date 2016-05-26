@@ -26,8 +26,6 @@ class aluno{
     private $al_situacao;
     private $al_estadoCivil;
 
-
-
     public function setId($id){
         $this->al_id = $id;
         return $this;
