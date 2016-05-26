@@ -35,6 +35,7 @@ class db_aluno extends connect{
             $sql->bindValue(":dt_nasc", $this->model->getDtNasc());
             $sql->bindValue(":dt_matricula", $this->model->getDtMatricula());
             $sql->bindValue(":ct_id", $this->model->getContactId());
+            $sql->bindValue(":ct_id", $this->model->getContactId());
             $sql->bindValue(":orgExp", $this->model->getOrgaoExpedidor());
             $sql->bindValue(":situacao", $this->model->getSituacaoAluno());
             $sql->bindValue(":estadoCivil", $this->model->getEstadoCivil());

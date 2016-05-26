@@ -28,7 +28,6 @@ class db_contato extends connect{
 
             $sql->execute();
             $this->MySql->commit();
-            print 1;
         } catch (Exception $e) {
             print $e->getMessage();
         }
