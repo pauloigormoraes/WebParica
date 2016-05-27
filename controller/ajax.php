@@ -3,6 +3,7 @@
 include "../model/dao/connect.php";
 include "../model/dao/db_contato.php";
 include "../model/dao/db_aluno.php";
+include "../model/dao/db_cargo.php";
 
 class ajax{
     protected $json;
@@ -58,11 +59,23 @@ class ajax{
         $model->setSituacaoAluno($dados->situacao);
         $model->setEstadoCivil($dados->estadoCivil);
 
-        print $db->insert();
+        $db->insert();
     }
 
-    protected function buscarAluno() {
+    protected function cadastrarCargo(){
+        $dados = $this->json;
+        $db = new db_cargo();
+        $model = $db->model;
 
+        $model->setNome($dados->cargo_nome);
+        $model->setSalario($dados->cargo_salario);
+        $model->setTurno($dados->cargo_turno);
+
+        $db->insert();
+    }
+
+    protected function listarCargo(){
+        
     }
 }
 

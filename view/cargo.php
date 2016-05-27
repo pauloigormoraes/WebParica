@@ -17,7 +17,7 @@
 			<div class="panel-heading">Cadastrar Cargo</div>
 			<div class="panel-body">
 				<div class="col-md-12">
-					<form role="form">
+					<form id="inserirCargo" onsubmit="return false">
 
 						<div class="form-group col-md-4">
 							<label>Função</label>

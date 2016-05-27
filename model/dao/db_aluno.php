@@ -3,7 +3,6 @@
 include "../model/aluno.php";
 
 class db_aluno extends connect{
-
     public $model;
     private $query;
 
@@ -11,7 +10,6 @@ class db_aluno extends connect{
         parent::__construct();
         $this->model = new aluno();
     }
-
     public function insert(){
         $this->query = $this->readQuery("insertAlunos");
         $this->MySql->beginTransaction();

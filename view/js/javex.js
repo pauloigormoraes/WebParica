@@ -23,6 +23,18 @@ $(window).ready(function(){
                 });
                 break;
 
+            case 'cargo':
+                showPage(link, function(){
+                    $("#inserirCargo").submit(function(){
+                        $.post("./request/cadastrarCargo", $(this).serialize(), function(info){
+                            if(info == "1"){
+                                alert("Cargo cadastrado com sucesso!");
+                            }
+                        });
+                    });
+                });
+                break;
+
             default:
                 showPage(link);
                 break;

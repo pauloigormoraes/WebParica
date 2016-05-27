@@ -21,22 +21,22 @@
 
 						<div class="form-group col-md-4">
 							<label>Nome do Colaborador</label>
-							<input name="colab_nome" class="form-control" type="text">
+							<input name="nome" class="form-control" type="text">
 						</div>
 
 						<div class="form-group col-md-2">
 							<label>CPF</label>
-							<input name="colab_cpf" class="form-control" type="text">
+							<input name="cpf" class="form-control" type="text">
 						</div>
 
 						<div class="form-group col-md-2">
 							<label>RG</label>
-							<input name="colab_rg" class="form-control" type="text">
+							<input name="rg" class="form-control" type="text">
 						</div>
 
 						<div class="form-group col-md-4">
 							<label>Cargo</label>
-							<select name="colab_cargo" class="form-control">
+							<select name="cargo_id" class="form-control">
 								<option value="" disabled selected>Selecione</option>
 								<option value="0">Por cargo aqui</option>
 							</select>

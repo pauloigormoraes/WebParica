@@ -3,7 +3,6 @@
 include "../model/contato.php";
 
 class db_contato extends connect{
-
     public $model;
     private $query;
 
@@ -11,7 +10,6 @@ class db_contato extends connect{
         parent::__construct();
         $this->model = new contato();
     }
-
     public function insert(){
         $this->query = $this->readQuery("insertContato");
         $this->MySql->beginTransaction();
@@ -32,7 +30,6 @@ class db_contato extends connect{
             print $e->getMessage();
         }
     }
-
     public function lastOne(){
         $this->query = "SELECT ct_id FROM parica_db.contato ORDER BY ct_id DESC LIMIT 1";
         try{
