@@ -43,7 +43,7 @@
         <li><a href="#buscar"><svg class="glyph stroked table"><use xlink:href="#stroked-table"></use></svg> Buscar aluno</a></li>
         <li><a href="#cadastrogeral"><svg class="glyph stroked pencil"><use xlink:href="#stroked-pencil"></use></svg> Cadastro Geral</a></li>
         <li><a href="#declaracao"><svg class="glyph stroked table"><use xlink:href="#stroked-clipboard-with-paper"></use></svg> Declarações/Atas</a></li>
-<!--        <li><a href="#formulario"><svg class="glyph stroked pencil"><use xlink:href="#stroked-pencil"></use></svg> Matricular</a></li>-->
+        <li><a href="#sucesso"><svg class="glyph stroked pencil"><use xlink:href="#stroked-pencil"></use></svg> sucesso</a></li>
         <li role="presentation" class="divider"></li>
     </ul>
 

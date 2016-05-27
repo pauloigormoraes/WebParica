@@ -16,6 +16,6 @@
 <div>
 	<div class="col-lg-12" style="margin-top: 140px">
 		<h1 class="font" style="font-size: 13px !important; text-align: center">
-			<p><a style="color: #777 !important;" href="http://www.moraespaulo.com/" target="_blank">Paulo Moraes,</a> <a style="color: #777 !important;" href="http://www.allexlima.com/" target="_blank">Allex Lima</a> e <a style="color: #777 !important;" href="http://www.anticitera.com.br/" target="_blank">Daniel Bispo</a> - UniNorte Laureate &copy; Todos os direitos reservados</p></h1>
+			<p><a style="color: #777 !important;" href="http://www.moraespaulo.com/" target="_blank">Paulo Moraes,</a> <a style="color: #777 !important;" href="http://www.allexlima.com/" target="_blank">Allex Lima</a> - UniNorte Laureate &copy; Todos os direitos reservados</p></h1>
 	</div>
 </div>
