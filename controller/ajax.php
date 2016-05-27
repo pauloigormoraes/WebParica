@@ -24,11 +24,18 @@ class ajax{
         $db->insert();
     }
 
+    protected function getLastContato(){
+        $db = new db_contato();
+        return $db->lastOne();
+    }
+
     protected function cadastrarAlunos(){
         
         $dados = $this->json;
         $db = new db_aluno();
         $model = $db->model;
+
+        $this->cadastrarContato();
 
         $model->setNomeAluno($dados->nome_aluno);
         $model->setNomeMae($dados->nome_mae);
@@ -46,7 +53,7 @@ class ajax{
         $model->setObs($dados->obs);
         $model->setDtNasc($dados->dt_nasc);
         $model->setDtMatricula(date("Y-m-d H:i:s"));
-        //$model->setContactId($dados->ct_id);
+        $model->setContactId($this->getLastContato());
         $model->setOrgaoExpedidor($dados->orgExp);
         $model->setSituacaoAluno($dados->situacao);
         $model->setEstadoCivil($dados->estadoCivil);

@@ -15,7 +15,9 @@ $(window).ready(function(){
                 showPage(link, function(){
                     $("#inserirAlunos").submit(function(){
                         $.post("./request/cadastrarAlunos", $(this).serialize(), function(info){
-                            alert(info);
+                            if(info == "1"){
+                                alert("Aluno cadastrado com sucesso!")
+                            }
                         });
                     });
                 });
