@@ -4,6 +4,7 @@ include "../model/dao/connect.php";
 include "../model/dao/db_contato.php";
 include "../model/dao/db_aluno.php";
 include "../model/dao/db_cargo.php";
+include "../model/dao/db_colaborador.php";
 
 class ajax{
     protected $json;
@@ -25,9 +26,9 @@ class ajax{
         $db->insert();
     }
 
-    protected function getLastContato(){
+    protected function listarUltimoContato(){
         $db = new db_contato();
-        return $db->lastOne();
+        return $db->showLastOne();
     }
 
     protected function cadastrarAlunos(){
@@ -54,7 +55,7 @@ class ajax{
         $model->setObs($dados->obs);
         $model->setDtNasc($dados->dt_nasc);
         $model->setDtMatricula(date("Y-m-d H:i:s"));
-        $model->setContactId($this->getLastContato());
+        $model->setContactId($this->listarUltimoContato());
         $model->setOrgaoExpedidor($dados->orgExp);
         $model->setSituacaoAluno($dados->situacao);
         $model->setEstadoCivil($dados->estadoCivil);
@@ -75,7 +76,22 @@ class ajax{
     }
 
     protected function listarCargo(){
-        
+        $db = new db_cargo();
+        header('Content-Type: application/json');
+        return $db->show();
+    }
+
+    protected function cadastrarColaborador(){
+        $dados = $this->json;
+        $db = new db_colaborador();
+        $model = $db->model;
+
+        $model->setNome($dados->nome);
+        $model->setCpf($dados->cpf);
+        $model->setRg($dados->rg);
+        $model->setCargoId($dados->cargo_id);
+
+        $db->insert();
     }
 }
 

@@ -30,7 +30,7 @@ class db_contato extends connect{
             print $e->getMessage();
         }
     }
-    public function lastOne(){
+    public function showLastOne(){
         $this->query = "SELECT ct_id FROM parica_db.contato ORDER BY ct_id DESC LIMIT 1";
         try{
             $sql = $this->MySql->query($this->query);

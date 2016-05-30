@@ -41,7 +41,7 @@ class db_aluno extends connect{
             $sql->execute();
             $this->MySql->commit();
             print 1;
-        }catch(Exception $e){
+        }catch(PDOException $e){
             print $e->getMessage();
         }
     }

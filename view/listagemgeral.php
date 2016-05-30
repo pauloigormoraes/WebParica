@@ -1,13 +1,13 @@
 <div class="row">
 	<ol class="breadcrumb">
-		<li><a href="#home"><svg class="glyph stroked pencil"><use xlink:href="#stroked-pencil"></use></svg></a></li>
-		<li class="active">Cadastro Geral</li>
+		<li><a href="#home"><svg class="glyph stroked open-folder"><use xlink:href="#stroked-open-folder"></use></svg> </a></li>
+		<li class="active">Listagem Geral</li>
 	</ol>
 </div>
 
 <div class="row">
 	<div class="col-lg-12">
-		<h1 class="page-header">Escolha o que deseja cadastrar</h1>
+		<h1 class="page-header">Escolha o que deseja listar</h1>
 	</div>
 </div>
 
@@ -16,40 +16,11 @@
 		<div class="panel panel-green panel-widget ">
 			<div class="row no-padding">
 				<div class="col-sm-3 col-lg-5 widget-left">
-					<svg class="glyph stroked male user "><use xlink:href="#stroked-male-user"/></svg>
+					<svg class="glyph stroked pen-tip"><use xlink:href="#stroked-pen-tip"></use></svg>
 				</div>
-				<a href="#formulario">
+				<a href="#listProfessores">
 					<div class="col-sm-9 col-lg-7 widget-right">
-						<div class="large">Aluno</div>
-					</div>
-				</a>
-			</div>
-		</div>
-	</div>
-	<div class="col-xs-12 col-md-3 col-lg-4">
-		<div class="panel panel-green panel-widget ">
-			<div class="row no-padding">
-				<div class="col-sm-3 col-lg-5 widget-left">
-					<svg class="glyph stroked paperclip"><use xlink:href="#stroked-paperclip"/></svg>
-				</div>
-				<a href="#cargo">
-					<div class="col-sm-9 col-lg-7 widget-right">
-						<div class="large">Cargo</div>
-					</div>
-				</a>
-			</div>
-		</div>
-	</div>
-	<div class="col-xs-12 col-md-3 col-lg-4">
-		<div class="panel panel-green panel-widget ">
-			<div class="row no-padding">
-				<div class="col-sm-3 col-lg-5 widget-left">
-					<svg class="glyph stroked pencil"><use xlink:href="#stroked-pencil"/></svg>
-				</div>
-				<a href="#colaborador">
-					<div class="col-sm-9 col-lg-7 widget-right">
-						<div class="large">Colaborador</div>
-						<div class="text-muted"></div>
+						<div class="large">Professores</div>
 					</div>
 				</a>
 			</div>
@@ -61,9 +32,9 @@
 				<div class="col-sm-3 col-lg-5 widget-left">
 					<svg class="glyph stroked two messages"><use xlink:href="#stroked-two-messages"/></svg>
 				</div>
-				<a href="#turma">
+				<a href="#listTurmas">
 					<div class="col-sm-9 col-lg-7 widget-right">
-						<div class="large">Turma</div>
+						<div class="large">Turmas</div>
 					</div>
 				</a>
 			</div>
@@ -75,9 +46,9 @@
 				<div class="col-sm-3 col-lg-5 widget-left">
 					<svg class="glyph stroked table"><use xlink:href="#stroked-table"/></svg>
 				</div>
-				<a href="#materia">
+				<a href="#listMaterias">
 					<div class="col-sm-9 col-lg-7 widget-right">
-						<div class="large">Matéria</div>
+						<div class="large">Matérias</div>
 					</div>
 				</a>
 			</div>
@@ -87,11 +58,41 @@
 		<div class="panel panel-green panel-widget ">
 			<div class="row no-padding">
 				<div class="col-sm-3 col-lg-5 widget-left">
+					<svg class="glyph stroked paperclip"><use xlink:href="#stroked-paperclip"/></svg>
+				</div>
+				<a href="#listCargos">
+					<div class="col-sm-9 col-lg-7 widget-right">
+						<div class="large">Cargos</div>
+					</div>
+				</a>
+			</div>
+		</div>
+	</div>
+	<div class="col-xs-12 col-md-3 col-lg-4">
+		<div class="panel panel-green panel-widget ">
+			<div class="row no-padding">
+				<div class="col-sm-3 col-lg-5 widget-left">
+					<svg class="glyph stroked pencil"><use xlink:href="#stroked-pencil"/></svg>
+				</div>
+				<a href="#listColaboradores">
+					<div class="col-sm-9 col-lg-7 widget-right">
+						<div class="large">Colaboradores</div>
+						<div class="text-muted"></div>
+					</div>
+				</a>
+			</div>
+		</div>
+	</div>
+
+	<div class="col-xs-12 col-md-3 col-lg-4">
+		<div class="panel panel-green panel-widget ">
+			<div class="row no-padding">
+				<div class="col-sm-3 col-lg-5 widget-left">
 					<svg class="glyph stroked bag"><use xlink:href="#stroked-blank-document"></use></svg>
 				</div>
-				<a href="#declaracao_cad">
+				<a href="#listDeclaracoes">
 					<div class="col-sm-9 col-lg-7 widget-right">
-						<div class="large">Declaração</div>
+						<div class="large">Declarações</div>
 					</div>
 				</a>
 			</div>

@@ -22,12 +22,18 @@ class db_cargo extends connect{
             $sql->execute();
             $this->MySql->commit();
             print 1;
-        } catch (Exception $e) {
+        } catch (PDOException $e) {
             print $e->getMessage();
         }
     }
-    public function list(){
-        $this->query = $this->readQuery("insertCargo");
+    public function show(){
+        $this->query = "SELECT * FROM parica_db.cargo ORDER BY ca_id DESC;";
+        try{
+            $sql = $this->MySql->query($this->query);
+            print json_encode($sql->fetchAll());
+        }catch(PDOException $e){
+            print $e->getMessage();
+        }
     }
 }
 

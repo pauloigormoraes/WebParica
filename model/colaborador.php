@@ -5,6 +5,7 @@ class colaborador{
     private $co_nome;
     private $co_cpf;
     private $co_rg;
+    private $cargo_ca_id;
 
     public function setId($id){
         $this->co_id = $id;
@@ -26,6 +27,11 @@ class colaborador{
         return $this;
     }
 
+    public function setCargoId($id){
+        $this->cargo_ca_id = $id;
+        return $this;
+    }
+
     public function getId(){
         return $this->co_id;
     }
@@ -40,6 +46,10 @@ class colaborador{
 
     public function getRg(){
         return $this->co_rg;
+    }
+
+    public function getCargoId(){
+        return $this->cargo_ca_id;
     }
 }
 

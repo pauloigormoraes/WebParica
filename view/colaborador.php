@@ -17,35 +17,32 @@
 			<div class="panel-heading">Cadastrar Colaborador</div>
 			<div class="panel-body">
 				<div class="col-md-12">
-					<form role="form">
-
+					<form id="inserirColaborador" onsubmit="return false">
 						<div class="form-group col-md-4">
 							<label>Nome do Colaborador</label>
-							<input name="nome" class="form-control" type="text">
+							<input name="nome" class="form-control" placeholder="Nome Completo" type="text" required>
 						</div>
 
 						<div class="form-group col-md-2">
 							<label>CPF</label>
-							<input name="cpf" class="form-control" type="text">
+							<input name="cpf" class="form-control" type="number" placeholder="Apenas números" required>
 						</div>
 
 						<div class="form-group col-md-2">
 							<label>RG</label>
-							<input name="rg" class="form-control" type="text">
+							<input name="rg" class="form-control" type="number" placeholder="Apenas números" required>
 						</div>
 
 						<div class="form-group col-md-4">
 							<label>Cargo</label>
-							<select name="cargo_id" class="form-control">
-								<option value="" disabled selected>Selecione</option>
-								<option value="0">Por cargo aqui</option>
+							<select name="cargo_id" id="sl_cargo_n" class="form-control" >
+								<option></option>
 							</select>
 						</div>
 
 						<button type="submit" class="btn btn-primary">Cadastrar</button>
 					</form>
 				</div>
-
 			</div>
 		</div>
 
