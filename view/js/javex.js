@@ -15,6 +15,7 @@ $(window).ready(function(){
 
     function table(element){
         $(element).DataTable({
+            "bDestroy": true,
             "language": {
                 "lengthMenu": "Mostrar _MENU_ itens por página",
                 "zeroRecords": "Não há dados para serem listados!",
@@ -107,12 +108,16 @@ $(window).ready(function(){
                             var model = "";
                             $(result).each(function(){
                                 var json = $(this)[0];
-                                model += "<tr><td>"+json.ca_id+"</td><td>"+json.ca_nome+"</td><td>"+json.ca_salario+"</td><td>"+json.ca_turno+"</td></tr>";
+                                model += "<tr id='"+json.ca_id+"'><td>"+json.ca_id+"</td><td>"+json.ca_nome+"</td><td>"+json.ca_salario+"</td><td>"+json.ca_turno+"</td></tr>";
                             });
                             $("table tbody").html(model);
                             table("table");
+                            $("table tbody tr").click(function(){
+                                alert($(this).attr("id"));
+                            });
                         }
                     });
+
                 });
                 break;
 

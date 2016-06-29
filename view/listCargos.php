@@ -6,7 +6,7 @@
 </div>
 
 <div class="row" style="margin: 10px">
-	<table class="table table-striped table-bordered table-hover" cellspacing="0" width="100%">
+	<table class="table table-striped table-bordered table-hover" width="100%">
 		<thead>
 			<tr>
 				<th>ID</th>
@@ -16,7 +16,7 @@
 			</tr>
 		</thead>
 
-		<tbody>
+		<tbody style="cursor:pointer;">
 
 		</tbody>
 	</table>
