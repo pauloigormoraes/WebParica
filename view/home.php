@@ -16,8 +16,8 @@
 <div>
 	<div class="col-lg-12 font" style="margin-top: 140px">
 		<span style="font-size: 13px !important; text-align: center">
-			<p>Desenvolvido por <a style="color: #777 !important;" href="http://www.allexlima.com/" target="_blank">Allex Lima</a> e <a style="color: #777 !important;" href="http://www.moraespaulo.com/" target="_blank">Paulo Moraes</a> - UniNorte Laureate 2016 &copy; Todos os direitos reservados.</p>
-			<p>Projeto Idealizado por <a style="color: #777 !important;" href="http://www.moraespaulo.com/" target="_blank">Paulo Moraes</a> e Profº Ms.C Antônio Picanço</p>
+			<p>Desenvolvido por <a style="color: #777 !important;" href="http://www.allexlima.com/" target="_blank">Allex Lima</a> e <a style="color: #777 !important;" href="http://www.pauloigormoraes.com/" target="_blank">Paulo Moraes</a> - UniNorte Laureate 2016 &copy; Todos os direitos reservados.</p>
+ -			<p>Projeto Idealizado por <a style="color: #777 !important;" href="http://www.moraespaulo.com/" target="_blank">Paulo Moraes</a> e Profº Ms.C Antônio Picanço</p>		 +			<p>Projeto Idealizado por <a style="color: #777 !important;" href="http://www.pauloigormoraes.com/" target="_blank">Paulo Moraes</a> e Profº Ms.C Antônio Picanço</p>
 		</span>
 	</div>
 </div>
