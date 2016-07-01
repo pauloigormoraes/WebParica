@@ -400,7 +400,7 @@ a.bg-danger:hover {
 }
 
 .font {
-	font-family: Raleway;
+	font-family: Raleway !important;
 }
 
 .widget-right {
