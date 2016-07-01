@@ -26,6 +26,23 @@ class db_cargo extends connect{
             print $e->getMessage();
         }
     }
+    public function update(){
+        $this->query = $this->readQuery("updateCargo");
+        $this->MySql->beginTransaction();
+        try {
+            $sql = $this->MySql->prepare($this->query);
+            $sql->bindValue(":ca_id", $this->model->getId());
+            $sql->bindValue(":ca_nome", $this->model->getNome());
+            $sql->bindValue(":ca_salario", $this->model->getSalario());
+            $sql->bindValue(":ca_turno", $this->model->getTurno());
+
+            $sql->execute();
+            $this->MySql->commit();
+            print 1;
+        } catch (PDOException $e) {
+            print $e->getMessage();
+        }
+    }
     public function show(){
         $this->query = "SELECT * FROM cargo ORDER BY ca_id DESC;";
         try{

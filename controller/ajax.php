@@ -75,6 +75,19 @@ class ajax{
         $db->insert();
     }
 
+    protected function atualizarCargo(){
+        $dados = $this->json;
+        $db = new db_cargo();
+        $model = $db->model;
+
+        $model->setId($dados->id);
+        $model->setNome($dados->cargo_nome);
+        $model->setSalario($dados->cargo_salario);
+        $model->setTurno($dados->cargo_turno);
+
+        $db->update();
+    }    
+
     protected function listarCargo(){
         $db = new db_cargo();
         header('Content-Type: application/json');

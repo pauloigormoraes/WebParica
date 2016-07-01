@@ -107,14 +107,30 @@ $(window).ready(function(){
                     $.ajax({url: "request/listarCargo",
                         success: function(result){
                             var model = "";
-                            $(result).each(function(){
+                            $(result).each(function(index){
                                 var json = $(this)[0];
-                                model += "<tr id='"+json.ca_id+"'><td>"+json.ca_id+"</td><td>"+json.ca_nome+"</td><td>"+json.ca_salario+"</td><td>"+json.ca_turno+"</td></tr>";
+                                var turno = ["Matutino", "Vespertino", "Noturno", "Diúrno"];
+                                model += "<tr i='"+index+"'><td>"+json.ca_id+"</td><td>"+json.ca_nome+"</td><td>"+json.ca_salario+"</td><td>"+turno[json.ca_turno]+"</td></tr>";
                             });
                             $("table tbody").html(model);
                             table("table");
                             $("table tbody tr").click(function(){
-                                alert($(this).attr("id"));
+                                var line = result[$(this).attr("i")];
+                                showPage("cargo", function(){
+                                    $(".panel-heading").html("Atualizar Cargo");
+                                    $(".btn").html("Salvar Alterações");
+                                    $('input[name="id"]').val(line.ca_id);
+                                    $('input[name="cargo_nome"]').val(line.ca_nome);
+                                    $('input[name="cargo_salario"]').val(line.ca_salario);
+                                    $('select[name="cargo_turno"] option').each(function(){
+                                        if($(this).val() == line.ca_turno){
+                                            $(this).attr("selected","selected");
+                                        }
+                                    });
+                                    $("#inserirCargo").submit(function(){
+                                        ajaxCall("atualizarCargo", $(this).serialize());
+                                    });
+                                });
                             });
                         }
                     });
