@@ -31,7 +31,7 @@ class db_contato extends connect{
         }
     }
     public function showLastOne(){
-        $this->query = "SELECT ct_id FROM parica_db.contato ORDER BY ct_id DESC LIMIT 1";
+        $this->query = "SELECT ct_id FROM contato ORDER BY ct_id DESC LIMIT 1";
         try{
             $sql = $this->MySql->query($this->query);
             return $sql->fetchObject()->ct_id;

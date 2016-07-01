@@ -27,7 +27,7 @@ class db_cargo extends connect{
         }
     }
     public function show(){
-        $this->query = "SELECT * FROM parica_db.cargo ORDER BY ca_id DESC;";
+        $this->query = "SELECT * FROM cargo ORDER BY ca_id DESC;";
         try{
             $sql = $this->MySql->query($this->query);
             print json_encode($sql->fetchAll());
