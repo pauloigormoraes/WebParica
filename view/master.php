@@ -41,7 +41,9 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#"><span>PARICÁ </span>ACADÊMICO</a>
+            <a class="navbar-brand" href="#home">
+                <img style="margin: 0 0 0 0" src='view/img/favicon.png'> | 
+                <span>PARICÁ </span>SISTEMA ACADÊMICO</a>
         </div>
 
     </div>

@@ -12,6 +12,10 @@ body {
 	color: #5f6468;
 }
 
+.fundo {
+	background: url('../img/fundo.png');
+}
+
 p {
 	color: #777;
 }
@@ -399,7 +403,7 @@ a.bg-danger:hover {
 	box-shadow: 10px 10px 100px #91DC5A;
 }
 
-.font {
+.fonte {
 	font-family: Raleway !important;
 }
 
