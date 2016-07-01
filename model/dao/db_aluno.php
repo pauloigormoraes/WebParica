@@ -10,6 +10,7 @@ class db_aluno extends connect{
         parent::__construct();
         $this->model = new aluno();
     }
+
     public function insert(){
         $this->query = $this->readQuery("insertAlunos");
         $this->MySql->beginTransaction();
@@ -41,6 +42,16 @@ class db_aluno extends connect{
             $sql->execute();
             $this->MySql->commit();
             print 1;
+        }catch(PDOException $e){
+            print $e->getMessage();
+        }
+    }
+
+    public function show(){
+        $this->query = $this->readQuery("selectAlunos");
+        try{
+            $sql = $this->MySql->query($this->query);
+            print json_encode($sql->fetchAll());
         }catch(PDOException $e){
             print $e->getMessage();
         }

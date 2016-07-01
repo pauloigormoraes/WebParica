@@ -32,3 +32,5 @@ class materia_turma{
         return $this->mt_tu_id;
     }
 }
+
+?>

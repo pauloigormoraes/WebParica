@@ -62,6 +62,14 @@ class ajax{
 
         $db->insert();
     }
+    
+    protected function atualizarAlunos(){}
+    
+    protected function listarAlunos(){
+        $db = new db_aluno();
+        header('Content-Type: application/json');
+        $db->show();
+    }
 
     protected function cadastrarCargo(){
         $dados = $this->json;

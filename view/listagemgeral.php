@@ -12,20 +12,22 @@
 </div>
 
 <div class="row">
+
 	<div class="col-xs-12 col-md-3 col-lg-4">
 		<div class="panel panel-green panel-widget ">
 			<div class="row no-padding">
 				<div class="col-sm-3 col-lg-5 widget-left">
-					<svg class="glyph stroked pen-tip"><use xlink:href="#stroked-pen-tip"></use></svg>
+					<svg class="glyph stroked male user "><use xlink:href="#stroked-male-user"/></svg>
 				</div>
-				<a href="#listProfessores">
+				<a href="#listAluno">
 					<div class="col-sm-9 col-lg-7 widget-right">
-						<div class="large">Professores</div>
+						<div class="large">Aluno</div>
 					</div>
 				</a>
 			</div>
 		</div>
 	</div>
+
 	<div class="col-xs-12 col-md-3 col-lg-4">
 		<div class="panel panel-green panel-widget ">
 			<div class="row no-padding">
@@ -84,7 +86,7 @@
 		</div>
 	</div>
 
-	<div class="col-xs-12 col-md-3 col-lg-4">
+	<!-- div class="col-xs-12 col-md-3 col-lg-4">
 		<div class="panel panel-green panel-widget ">
 			<div class="row no-padding">
 				<div class="col-sm-3 col-lg-5 widget-left">
@@ -97,5 +99,6 @@
 				</a>
 			</div>
 		</div>
-	</div>
+	</div-->
+
 </div>

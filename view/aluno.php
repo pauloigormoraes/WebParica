@@ -18,9 +18,19 @@
 				<div class="panel-heading">Dados do Aluno</div>
 				<div class="panel-body">
 					<div class="col-md-12">
-						<div class="form-group col-md-12">
+						<div class="form-group col-md-6">
 							<label>Nome do aluno</label>
 							<input name="nome_aluno" class="form-control" type="text" placeholder="Nome completo sem abreviações" required>
+						</div>
+
+						<div class="form-group col-md-3">
+							<label>Naturalidade</label>
+							<input name="naturalidade" class="form-control" type="text" placeholder="Cidade de Nascimento" required>
+						</div>
+
+						<div class="form-group col-md-3">
+							<label>Nacionalidade</label>
+							<input name="nacionalidade" class="form-control" type="text" placeholder="País de Nascimento" required>
 						</div>
 
 						<div class="form-group col-md-3">
@@ -133,7 +143,7 @@
 
 						<div class="form-group col-md-3">
 							<label>Bairro</label>
-							<input name="rg_pai" class="form-control" type="text" required>
+							<input name="bairro" class="form-control" type="text" required>
 						</div>
 
 						<div class="form-group col-md-3">
@@ -216,6 +226,25 @@
 						<div class="form-group col-md-12">
 							<label>Observação</label>
 							<textarea name="obs" class="form-control" rows="5"></textarea>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="panel panel-default" style="display: none">
+				<div class="panel-heading">Solicitação de Declaração</div>
+				<div class="panel-body">
+					<div class="col-md-12">
+						<div class="form-group col-md-10">
+							<label>Modelo: </label>
+							<select name="declaracao" class="form-control">
+								<option value="" disabled selected>Selecione</option>
+							</select>
+						</div>
+
+						<div class="form-group col-md-2">
+							<br>
+							<input type="button" style="margin-top: 5px" class="btn btn-default" value="Gerar Declaração">
 						</div>
 					</div>
 				</div>
