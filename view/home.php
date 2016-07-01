@@ -1,9 +1,10 @@
-<div class="row">
-	<ol class="breadcrumb">
-		<li><a href="#"><svg class="glyph stroked home"><use xlink:href="#stroked-home"></use></svg></a></li>
-		<li class="active">Início</li>
-	</ol>
-</div>
+<div class="fundo">
+	<div class="row">
+		<ol class="breadcrumb">
+			<li><a href="#"><svg class="glyph stroked home"><use xlink:href="#stroked-home"></use></svg></a></li>
+			<li class="active">Início</li>
+		</ol>
+	</div>
 
 	<div class="fonte" style="text-align: center;">
 		<div class="col-lg-12" style="margin-top: 120px">
