@@ -176,9 +176,6 @@ class aluno{
     public function getContactId(){
         return $this->al_ct_id;
     }
-    public function getTurmaId(){
-        return $this->turma_tu_id;
-    }
     public function getOrgaoExpedidor(){
         return $this->al_orgExp;
     }
