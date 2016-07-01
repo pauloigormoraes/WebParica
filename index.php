@@ -9,6 +9,6 @@ setlocale(LC_ALL, 'pt_BR');
 session_start();
 $_SESSION['userId'] = '1234';
 
-#include "view/master.php";
+include "view/master.php";
 
 ?>
