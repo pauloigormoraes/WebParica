@@ -7,4 +7,4 @@ Allex Lima: Desenvolvimento Back-end, Banco de dados e arquitetura; e Paulo Mora
 Visite: www.allexlima.com e www.moraespaulo.com
 
 UniNorte Laureate 2016 © Todos os direitos reservados.
-Turma de Engenharia da Computação - CMN05S2 2016/01
+Turma de Engenharia da Computação - CMN05S2 2016/01 
