@@ -14,6 +14,7 @@ $(window).ready(function(){
     }
 
     function table(element){
+
         $(element).DataTable({
             "bDestroy": true,
             "language": {

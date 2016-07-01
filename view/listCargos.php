@@ -17,7 +17,7 @@
 		</thead>
 
 		<tbody style="cursor:pointer;">
-
+			Carregando...
 		</tbody>
 	</table>
 </div>
