@@ -18,6 +18,9 @@
 			<div class="panel-body">
 				<div class="col-md-12">
 					<form id="inserirColaborador" onsubmit="return false">
+
+						<input type="hidden" name="id" value="0">
+
 						<div class="form-group col-md-4">
 							<label>Nome do Colaborador</label>
 							<input name="nome" class="form-control" placeholder="Nome Completo" type="text" required>

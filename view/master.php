@@ -55,7 +55,7 @@
         <li><a href="#cadastrogeral"><svg class="glyph stroked pencil"><use xlink:href="#stroked-pencil"></use></svg> Cadastro Geral</a></li>
         <li><a href="#listagemgeral"><svg class="glyph stroked open-folder"><use xlink:href="#stroked-open-folder"></use></svg> Listagem Geral</a></li>
         <li><a href="#declaracao"><svg class="glyph stroked table"><use xlink:href="#stroked-clipboard-with-paper"></use></svg> Declarações/Atas</a></li>
-        <li><a href="#listCargos"><svg class="glyph stroked table"><use xlink:href="#stroked-clipboard-with-paper"></use></svg> [Temp/Test] List Cargo</a></li>
+        <li><a href="#listColaboradores"><svg class="glyph stroked table"><use xlink:href="#stroked-clipboard-with-paper"></use></svg> [Temp/Test] List Colaborador</a></li>
         <li role="presentation" class="divider"></li>
     </ul>
 

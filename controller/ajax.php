@@ -91,7 +91,7 @@ class ajax{
     protected function listarCargo(){
         $db = new db_cargo();
         header('Content-Type: application/json');
-        return $db->show();
+        $db->show();
     }
 
     protected function cadastrarColaborador(){
@@ -106,6 +106,27 @@ class ajax{
 
         $db->insert();
     }
+
+    protected function atualizarColaborador(){
+        $dados = $this->json;
+        $db = new db_colaborador();
+        $model = $db->model;
+
+        $model->setId($dados->id);
+        $model->setNome($dados->nome);
+        $model->setCpf($dados->cpf);
+        $model->setRg($dados->rg);
+        $model->setCargoId($dados->cargo_id);
+
+        $db->update();
+    }
+    
+    protected function listarColaborador(){
+        $db = new db_colaborador();
+        header('Content-Type: application/json');
+        $db->show();
+    }    
+    
 }
 
 ?>

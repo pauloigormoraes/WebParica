@@ -138,6 +138,56 @@ $(window).ready(function(){
                 });
                 break;
 
+            case 'listColaboradores':
+                showPage(link, function(){
+                    $.ajax({url: "request/listarColaborador",
+                        success: function(result){
+                            $(result).each(function(index){
+                                var model = "";
+                                $(result).each(function(index){
+                                    var json = $(this)[0];
+                                    var turno = ["Matutino", "Vespertino", "Noturno", "Diúrno"];
+                                    model += "<tr i='"+index+"'><td>"+json.co_id+"</td><td>"+json.co_nome+"</td><td>"+json.co_cpf+"</td><td>"+json.co_rg+"</td><td>"+json.ca_nome+"</td><td>"+json.ca_salario+"</td><td>"+turno[json.ca_turno]+"</td></tr>";
+                                });
+                                $("table tbody").html(model);
+                                table("table");
+                                $("table tbody tr").click(function(){
+                                    var line = result[$(this).attr("i")];
+                                    showPage("colaborador", function(){
+                                        $(".panel-heading").html("Atualizar Colaborador");
+                                        $(".btn").html("Salvar Alterações");
+                                        $('input[name="id"]').val(line.co_id);
+                                        $('input[name="nome"]').val(line.co_nome);
+                                        $('input[name="cpf"]').val(line.co_cpf);
+                                        $('input[name="rg"]').val(line.co_rg);
+                                        $.ajax({url: "request/listarCargo",
+                                            beforeSend: function(){
+                                                $('#sl_cargo_n').html("<option value='' disabled selected>Carregando...</option>");
+                                            }, success: function(result){
+                                                var model = "";
+                                                $(result).each(function(){
+                                                    var json = $(this)[0];
+                                                    if(line.cargo_ca_id == json.ca_id)
+                                                        model += "<option value='"+json.ca_id+"' selected>"+json.ca_nome+"</option>";
+                                                    else
+                                                        model += "<option value='"+json.ca_id+"'>"+json.ca_nome+"</option>";
+                                                });
+                                                $('#sl_cargo_n').html(model);
+                                            }, error: function(){
+                                                $('#sl_cargo_n').html("<option value='' disabled selected>Erro ao carregar cargos</option>");
+                                            }
+                                        });
+                                        $("#inserirColaborador").submit(function(){
+                                            ajaxCall("atualizarColaborador", $(this).serialize());
+                                        });
+                                    });
+                                });
+                            });
+                        }
+                    });
+                });
+                break;            
+            
             default:
                 showPage(link);
                 break;
