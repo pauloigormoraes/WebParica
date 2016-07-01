@@ -1,4 +1,4 @@
-INSERT INTO parica_db.colaborador(
+INSERT INTO colaborador(
 	  co_nome,
     co_cpf,
     co_rg,

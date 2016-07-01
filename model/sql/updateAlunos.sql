@@ -1,5 +1,5 @@
 UPDATE 
-	parica_db.aluno
+	aluno
 SET
 	al_nome_aluno = :nome_aluno,
 	al_nome_mae = :nome_mae,

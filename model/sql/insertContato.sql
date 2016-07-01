@@ -1,4 +1,4 @@
-INSERT INTO parica_db.contato(
+INSERT INTO contato(
 	ct_lagradouro,
 	ct_numero,
 	ct_bairro,

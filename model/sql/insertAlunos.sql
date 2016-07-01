@@ -1,4 +1,4 @@
-INSERT INTO parica_db.aluno(
+INSERT INTO aluno(
 	al_nome_aluno,
 	al_nome_mae,
 	al_nome_pai,

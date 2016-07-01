@@ -1,4 +1,4 @@
-INSERT INTO parica_db.cargo(
+INSERT INTO cargo(
 	ca_nome,
     ca_salario,
     ca_turno
