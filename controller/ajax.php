@@ -103,6 +103,7 @@ class ajax{
         $model->setNaturalidade($dados->naturalidade);
         $model->setNacionalidade($dados->nacionalidade);
         $model->setObs($dados->obs);
+        $model->setTurmaId($dados->turma_id);
         $model->setDtNasc($dados->dt_nasc);
         $model->setOrgaoExpedidor($dados->orgExp);
         $model->setSituacaoAluno($dados->situacao);

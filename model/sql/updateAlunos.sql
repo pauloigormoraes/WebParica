@@ -17,6 +17,7 @@ SET
 	al_obs = :obs,
 	al_dt_nasc = :dt_nasc,
 	al_orgExp = :orgExp,
+	al_tu_id = :turma_id,
 	al_situacao = :situacao,
 	al_estadoCivil = :estadoCivil
 WHERE

@@ -67,6 +67,7 @@ class db_aluno extends connect{
             $sql->bindValue(":naturalidade", $this->model->getNaturalidade());
             $sql->bindValue(":nacionalidade", $this->model->getNacionalidade());
             $sql->bindValue(":obs", $this->model->getObs());
+            $sql->bindValue(":turma_id", $this->model->getTurmaId());
             $sql->bindValue(":dt_nasc", $this->model->getDtNasc());
             $sql->bindValue(":orgExp", $this->model->getOrgaoExpedidor());
             $sql->bindValue(":situacao", $this->model->getSituacaoAluno());

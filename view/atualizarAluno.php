@@ -9,7 +9,6 @@
 <ul id="tabs" class="nav nav-tabs" data-tabs="tabs">
 	<li class="active"><a href="#dadospessoais" data-toggle="tab">Dados Pessoais</a></li>
 	<li><a href="#end" data-toggle="tab">Endereço</a></li>
-	<li><a href="#turma" data-toggle="tab">Turma</a></li>
 	<li><a href="#boletim" data-toggle="tab">Boletim</a></li>
 </ul>
 
@@ -22,6 +21,7 @@
 					<input type="hidden" name="id_al" value="0">
 					<div class="panel-heading">Dados do Aluno</div>
 					<div class="panel-body">
+
 						<div class="col-md-12">
 							<div class="form-group col-md-6">
 								<label>Nome do aluno</label>
@@ -135,6 +135,15 @@
 					<div class="panel-heading">Dados Acadêmicos</div>
 					<div class="panel-body">
 						<div class="col-md-12">
+
+							<div class="form-group col-md-6">
+								<label>Turma</label>
+								<input name="id_al" type="hidden" value="0">
+								<select name="turma_id" class="form-control" required>
+									<option value="" disabled selected>Selecione</option>
+								</select>
+							</div>
+
 							<div class="form-group col-md-6">
 								<label>Situação</label>
 								<select name="situacao" class="form-control" required>
@@ -248,18 +257,54 @@
 			</div>
 		</form>
 	</div>
-	<div class="tab-pane" id="turma">
-		<form id="turmaform" onsubmit="return false">
+
+	<div class="tab-pane" id="boletim">
+		<form id="boletimform" onsubmit="return false">
 			<div class="panel panel-default">
-				<div class="panel-heading">Turma</div>
+				<div class="panel-heading">Boletim</div>
 				<div class="panel-body">
-					<div class="form-group col-md-12">
-						<label>Turma</label>
-						<input name="id_al" type="hidden" value="0">
-						<select name="turma_id" class="form-control" required>
-							<option value="" disabled selected>Selecione</option>
-						</select>
-					</div>
+
+					<select class="form-control" name="materia_id"></select>
+					<br>
+					<table class="table table-striped table-bordered" width="100%">
+						<thead>
+						<tr>
+							<th>Disciplina</th>
+							<th>1ª BIM</th>
+							<th>2ª BIM</th>
+							<th>3ª BIM</th>
+							<th>4ª BIM</th>
+							<th>Final</th>
+						</tr>
+						</thead>
+
+						<tbody>
+						<tr>
+							<td id="bo_nome">dsf</td>
+							<td>
+								Nota: <input name="n1"  class="form-control" style="width: 80px; display: inline-block" type="number"><br>
+								Faltas: <input name="f1" class="form-control" style="width: 80px; display: inline-block" type="number">
+							</td>
+							<td>
+								Nota: <input name="n2"  class="form-control" style="width: 80px; display: inline-block" type="number"><br>
+								Faltas: <input name="f2" class="form-control" style="width: 80px; display: inline-block" type="number">
+							</td>
+							<td>
+								Nota: <input name="n3"  class="form-control" style="width: 80px; display: inline-block" type="number"><br>
+								Faltas: <input name="f3" class="form-control" style="width: 80px; display: inline-block" type="number">
+							</td>
+							<td>
+								Nota: <input name="n4"  class="form-control" style="width: 80px; display: inline-block" type="number"><br>
+								Faltas: <input name="f4" class="form-control" style="width: 80px; display: inline-block" type="number">
+							</td>
+							<td>
+								Nota: <input name="nf" disabled  class="form-control" style="width: 80px; display: inline-block" type="number"><br>
+								Faltas: <input name="ff" disabled class="form-control" style="width: 80px; display: inline-block" type="number">
+							</td>
+						</tr>
+						</tbody>
+					</table>
+
 				</div>
 			</div>
 			<div class="panel panel-default col-md-12">
@@ -268,59 +313,6 @@
 				</div>
 			</div>
 		</form>
-	</div>
-	<div class="tab-pane" id="boletim">
-		<div class="panel panel-default">
-			<div class="panel-heading">Boletim</div>
-			<div class="panel-body">
-				<label>Matéria</label>
-				<div class="col-md-12">
-					<div class="form-group col-md-2">
-						<input name="bo_n1" class="form-control" type="number" required>
-					</div>
-					<div class="form-group col-md-2">
-						<input name="bo_n2" class="form-control" type="number" required>
-					</div>
-					<div class="form-group col-md-2">
-						<input name="bo_n3" class="form-control" type="number" required>
-					</div>
-					<div class="form-group col-md-2">
-						<input name="bo_n4" class="form-control" type="number" required>
-					</div>
-					<div class="form-group col-md-2">
-						<p style="margin: 10px 10px 10px 20px"><b>Média Final</b></p>
-					</div>
-					<div class="form-group col-md-2">
-						<input name="bo_nmd" disabled selected class="form-control" type="number" required>
-					</div>
-				</div>
-				<div class="col-md-12">
-					<div class="form-group col-md-2">
-						<input name="bo_f1" class="form-control" type="number" required>
-					</div>
-					<div class="form-group col-md-2">
-						<input name="bo_f2" class="form-control" type="number" required>
-					</div>
-					<div class="form-group col-md-2">
-						<input name="bo_f3" class="form-control" type="number" required>
-					</div>
-					<div class="form-group col-md-2">
-						<input name="bo_f4" class="form-control" type="number" required>
-					</div>
-					<div class="form-group col-md-2">
-						<p style="margin: 10px 10px 10px 20px"><b>Total de Faltas</b></p>
-					</div>
-					<div class="form-group col-md-2">
-						<input name="bo_ft" disabled selected class="form-control" type="number" required>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="panel panel-default col-md-12">
-			<div class="panel-body">
-				<button type="submit" style="float: right;" class="btn btn-primary glyphicon glyphicon-ok-circle"><b class="fonte">   SALVAR</b></button>
-			</div>
-		</div>
 	</div>
 </div>
 

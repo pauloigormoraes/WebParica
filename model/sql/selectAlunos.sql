@@ -7,9 +7,4 @@ FROM
         LEFT JOIN
     contato ON aluno.al_ct_id = ct_id
         LEFT JOIN
-    turma ON turma.tu_id = (SELECT 
-            aluno_turma.at_tu_id
-        FROM
-            aluno_turma
-        WHERE
-            aluno_turma.at_al_id = aluno.al_id);
+    turma ON aluno.al_tu_id = turma.tu_id;

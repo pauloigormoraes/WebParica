@@ -313,10 +313,9 @@ $(window).ready(function(){
                                         beforeSend: function(){
                                             $('select[name="turma_id"]').html("<option value='' disabled selected>Carregando...</option>");
                                         }, success: function(result){
-                                            var model = "";
+                                            model = "<option value='' disabled selected>Selecione</option>";
                                             $(result).each(function(){
                                                 var json = $(this)[0];
-                                                model = "<option value='' disabled selected>Selecione</option>";
                                                 if(line.al_tu_id == json.tu_id)
                                                     model += "<option value='"+json.tu_id+"' selected>"+json.tu_nome+" (VINCULADO)</option>";
                                                 else
@@ -328,14 +327,16 @@ $(window).ready(function(){
                                         }
                                     })
                                     
+                                    
+                                    
                                     $("#ddpessoais").submit(function(){
                                         ajaxCall("atualizarAlunos", $(this).serialize());
                                     });
                                     $("#endereco").submit(function(){
                                         ajaxCall("atualizarContato", $(this).serialize());
                                     });
-                                    $("#turmaform").submit(function(){
-                                        ajaxCall("atualizarAlunoTurma", $(this).serialize());
+                                    $("#boletimform").submit(function(){
+                                        ajaxCall("up", $(this).serialize());
                                     });
                                 });
                             });
