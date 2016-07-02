@@ -173,12 +173,31 @@ class ajax{
         $db = new db_materia();
         $model = $db->model;
 
-        $model->setNome($dados->cargo_nome);
-        $model->setSalario($dados->cargo_salario);
-        $model->setTurno($dados->cargo_turno);
+        $model->setNome($dados->ma_nome);
+        $model->setTurmaId($dados->ma_tu_id);
+        $model->setColaboradorId($dados->ma_co_id);
 
         $db->insert();
-    }    
+    }
+
+    protected function listarMateria(){
+        $db = new db_materia();
+        header('Content-Type: application/json');
+        $db->show();
+    }
+
+    protected function atualizarMateria(){
+        $dados = $this->json;
+        $db = new db_materia();
+        $model = $db->model;
+
+        $model->setId($dados->id);
+        $model->setNome($dados->ma_nome);
+        $model->setTurmaId($dados->ma_tu_id);
+        $model->setColaboradorId($dados->ma_co_id);
+
+        $db->update();
+    }
     
 }
 

@@ -132,11 +132,35 @@
 							</div>
 						</div>
 
+						<div class="panel panel-default">
+							<div class="panel-heading">Dados Acadêmicos</div>
+							<div class="panel-body">
+								<div class="col-md-12">
+									<div class="form-group col-md-6">
+										<label>Situação</label>
+										<select name="situacao" class="form-control" required>
+											<option value="" disabled selected>Selecione</option>
+											<option value="0">Novo</option>
+											<option value="1">Transferido</option>
+											<option value="2">Desistente</option>
+											<option value="3">Repetente</option>
+										</select>
+									</div>
+
+									<div class="form-group col-md-12">
+										<label>Observação</label>
+										<textarea name="obs" class="form-control" rows="5"></textarea>
+									</div>
+								</div>
+							</div>
+						</div>
+
 						<div class="panel panel-default col-md-12">
 							<div class="panel-body">
 								<button type="submit" style="float: right;" class=" btn btn-primary glyphicon glyphicon-ok-circle"><b class="fonte">   SALVAR</b></button>
 							</div>
 						</div>
+
 
 					</div>
 				</form>
@@ -211,7 +235,7 @@
 								<input name="tel_2" class="form-control" type="tel">
 							</div>
 
-							<div class="form-group col-md-8">
+							<div class="form-group col-md-12">
 								<label>E-mail</label>
 								<input name="email" class="form-control" type="email">
 							</div>

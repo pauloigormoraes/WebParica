@@ -19,6 +19,8 @@
 				<div class="col-md-12">
 					<form id="inserirMateria" onsubmit="return false">
 
+						<input name="id" type="hidden" value="0">
+
 						<div class="form-group col-md-4">
 							<label>Disciplina</label>
 							<input name="ma_nome" class="form-control" type="text">
