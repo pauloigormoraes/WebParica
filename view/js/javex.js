@@ -102,6 +102,50 @@ $(window).ready(function(){
                 });
                 break;
 
+            case 'turma':
+                showPage(link, function(){
+                    $("#inserirTurma").submit(function(){
+                        ajaxCall("cadastrarTurma", $(this).serialize());
+                    });
+                });
+                break;
+
+            case 'listTurmas':
+                showPage(link, function() {
+                    $.ajax({
+                        url: "request/listarTurma",
+                        success: function (result) {
+                            var model = "";
+                            $(result).each(function (index) {
+                                var json = $(this)[0];
+                                var turno = ["Matutino", "Vespertino", "Noturno", "Diúrno"];
+                                model += "<tr i='" + index + "'><td>" + json.tu_id + "</td><td>" + json.tu_nome + "</td><td>" + turno[json.tu_turno] + "</td><td>" + json.tu_ano + "</td></tr>";
+                            });
+                            $("table tbody").html(model);
+                            table("table");
+                            $("table tbody tr").click(function(){
+                                var line = result[$(this).attr("i")];
+                                showPage("turma", function(){
+                                    $(".panel-heading").html("Atualizar Turma");
+                                    $(".btn").html("Salvar Alterações");
+                                    $('input[name="id"]').val(line.tu_id);
+                                    $('input[name="turma_nome"]').val(line.tu_nome);
+                                    $('input[name="turma_ano"]').val(line.tu_ano);
+                                    $('select[name="turma_turno"] option').each(function(){
+                                        if($(this).val() == line.tu_turno){
+                                            $(this).attr("selected","selected");
+                                        }
+                                    });
+                                    $("#inserirTurma").submit(function(){
+                                        ajaxCall("atualizarTurma", $(this).serialize());
+                                    });
+                                });
+                            });
+                        }
+                    });
+                });
+                break;            
+
             case 'listAluno':
                 showPage(link, function(){
                     $.ajax({url: "request/listarAlunos",

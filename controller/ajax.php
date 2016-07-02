@@ -5,6 +5,7 @@ include "../model/dao/db_contato.php";
 include "../model/dao/db_aluno.php";
 include "../model/dao/db_cargo.php";
 include "../model/dao/db_colaborador.php";
+include "../model/dao/db_turma.php";
 
 class ajax{
     protected $json;
@@ -100,6 +101,24 @@ class ajax{
         $db = new db_cargo();
         header('Content-Type: application/json');
         $db->show();
+    }
+
+    protected function listarTurma(){
+        $db = new db_turma();
+        header('Content-Type: application/json');
+        $db->show();
+    }
+
+    protected function cadastrarTurma(){
+        $dados = $this->json;
+        $db = new db_turma();
+        $model = $db->model;
+
+        $model->setNome($dados->turma_nome);
+        $model->setTurno($dados->turma_turno);
+        $model->setAno($dados->turma_ano);
+
+        $db->insert();
     }
 
     protected function cadastrarColaborador(){
