@@ -1,19 +1,19 @@
+
 <div class="row">
 	<ol class="breadcrumb">
 		<li><a href="#"><svg class="glyph stroked home"><use xlink:href="#stroked-home"></use></svg></a></li>
-		<li class="active">Atualizar dados do aluno</li>
+		<li class="active"><b>Atualizar dados do aluno</b></li>
 	</ol>
 </div>
 
-<div class="row">
 	<div id="content">
-
-		<ul class="nav nav-pills" data-tabs="tabs">
-			<li class="active"></cl><a href="#dadospessoais" data-toggle="tab">Dados Pessoais</a></li>
-			<li><a href="#endereco" data-toggle="tab">Endereço</a></li>
+		<ul id="tabs" class="nav nav-tabs" data-tabs="tabs">
+			<li class="active"><a href="#dadospessoais" data-toggle="tab">Dados Pessoais</a></li>
+			<li><a href="#end" data-toggle="tab">Endereço</a></li>
 			<li><a href="#turma" data-toggle="tab">Turma</a></li>
 			<li><a href="#boletim" data-toggle="tab">Boletim</a></li>
 		</ul>
+
 
 		<div id="my-tab-content" class="tab-content">
 			<div class="tab-pane active" id="dadospessoais">
@@ -132,37 +132,9 @@
 							</div>
 						</div>
 
-						<div class="panel panel-default">
-							<div class="panel-heading">Dados Acadêmicos</div>
+						<div class="panel panel-default col-md-12">
 							<div class="panel-body">
-								<div class="col-md-12">
-									<div class="form-group col-md-6">
-										<label>Escola</label>
-										<input name="escola" disabled selected value="ESCOLA PROFESSOR CICERO MONTEIRO" class="form-control" type="text">
-									</div>
-
-									<div class="form-group col-md-6">
-										<label>Situação</label>
-										<select name="situacao" class="form-control" required>
-											<option value="" disabled selected>Selecione</option>
-											<option value="0">Novo</option>
-											<option value="1">Transferido</option>
-											<option value="2">Desistente</option>
-											<option value="3">Repetente</option>
-										</select>
-									</div>
-
-									<div class="form-group col-md-12">
-										<label>Observação</label>
-										<textarea name="obs" class="form-control" rows="5"></textarea>
-									</div>
-								</div>
-							</div>
-						</div>
-
-						<div class="panel panel-default">
-							<div class="panel-body">
-								<button type="submit" class="btn btn-primary">Salvar</button>
+								<button type="submit" style="float: right;" class=" btn btn-primary glyphicon glyphicon-ok-circle"><b class="fonte">   SALVAR</b></button>
 							</div>
 						</div>
 
@@ -170,8 +142,7 @@
 				</form>
 			</div>
 
-
-			<div class="tab-pane active" id="endereco">
+			<div class="tab-pane" id="end">
 				<div class="panel panel-default">
 					<div class="panel-heading">Dados para contato</div>
 					<div class="panel-body">
@@ -247,7 +218,47 @@
 						</div>
 					</div>
 				</div>
+				<div class="panel panel-default col-md-12">
+					<div class="panel-body">
+						<button type="submit" style="float: right;" class="btn btn-primary glyphicon glyphicon-ok-circle"><b class="fonte">   SALVAR</b></button>
+					</div>
+				</div>
 			</div>
+
+
+			<div class="tab-pane" id="turma">
+				<div class="panel panel-default">
+					<div class="panel-heading">Dados para contato</div>
+					<div class="panel-body">
+						<div class="form-group col-md-12">
+							<label>Turma</label>
+							<select name="estado" class="form-control" required>
+								<option value="" disabled selected>Selecione</option>
+							</select>
+						</div>
+						</div>
+				</div>
+				<div class="panel panel-default col-md-12">
+					<div class="panel-body">
+						<button type="submit" style="float: right;" class="btn btn-primary glyphicon glyphicon-ok-circle"><b class="fonte">   SALVAR</b></button>
+					</div>
+				</div>
+			</div>
+			<div class="tab-pane" id="boletim">
+				<h1>Green</h1>
+				<p>green green green green green</p>
+			</div>
+
 		</div>
-	</div>
-</div>
+
+
+	<script type="text/javascript">
+		jQuery(document).ready(function ($) {
+			$('#tabs').tab();
+		});
+	</script>
+
+
+<script type="text/javascript" src="../bootstrap/js/bootstrap.js"></script>
+
+

@@ -1,7 +1,7 @@
 <div class="row">
 	<ol class="breadcrumb">
 		<li><a href="#home"><svg class="glyph stroked open-folder"><use xlink:href="#stroked-open-folder"></use></svg> </a></li>
-		<li class="active">Listagem Geral</li>
+		<li class="active"><b>Listagem Geral</b></li>
 	</ol>
 </div>
 
