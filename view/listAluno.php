@@ -9,9 +9,10 @@
 	<table class="table table-striped table-bordered table-hover" width="100%">
 		<thead>
 			<tr>
-				<th>ID</th>
-				<th>Nome do Cargo</th>
-				<th>Salário</th>
+				<th>Matrícula (Id)</th>
+				<th>Nome</th>
+				<th>Mãe</th>
+				<th>Turma</th>
 				<th>Turno</th>
 			</tr>
 		</thead>

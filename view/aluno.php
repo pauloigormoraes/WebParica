@@ -231,25 +231,6 @@
 				</div>
 			</div>
 
-			<div class="panel panel-default" style="display: none">
-				<div class="panel-heading">Solicitação de Declaração</div>
-				<div class="panel-body">
-					<div class="col-md-12">
-						<div class="form-group col-md-10">
-							<label>Modelo: </label>
-							<select name="declaracao" class="form-control">
-								<option value="" disabled selected>Selecione</option>
-							</select>
-						</div>
-
-						<div class="form-group col-md-2">
-							<br>
-							<input type="button" style="margin-top: 5px" class="btn btn-default" value="Gerar Declaração">
-						</div>
-					</div>
-				</div>
-			</div>
-
 			<div class="panel panel-default">
 				<div class="panel-body">
 					<button type="submit" class="btn btn-primary"><b>Matricular Aluno</b></button>

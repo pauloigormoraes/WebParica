@@ -63,7 +63,7 @@ $(window).ready(function(){
                 showPage("listagemgeral", function (){getLink();});
                 break;
 
-            case 'formulario':
+            case 'aluno':
                 showPage(link, function(){
                     $("#inserirAlunos").submit(function(){
                         ajaxCall("cadastrarAlunos", $(this).serialize());
@@ -99,6 +99,30 @@ $(window).ready(function(){
                     $("#inserirColaborador").submit(function(){
                         ajaxCall("cadastrarColaborador", $(this).serialize());
                     });
+                });
+                break;
+
+            case 'listAluno':
+                showPage(link, function(){
+                    $.ajax({url: "request/listarAlunos",
+                        success: function(result){
+                            var model = "";
+                            $(result).each(function(index){
+                                var json = $(this)[0];
+                                var turno = ["Matutino", "Vespertino", "Noturno", "Diúrno"];
+                                model += "<tr i='"+index+"'><td>"+json.al_id+"</td><td>"+json.al_nome_aluno+"</td><td>"+json.al_nome_mae+"</td><td>"+json.tu_nome+"</td><td>"+turno[json.tu_turno]+"</td></tr>";
+                            });
+                            $("table tbody").html(model);
+                            table("table");
+                            $("table tbody tr").click(function(){
+                                var line = result[$(this).attr("i")];
+                                showPage("atualizarAluno", function(){
+                                    //...
+                                });
+                            });
+                        }
+                    });
+
                 });
                 break;
 
