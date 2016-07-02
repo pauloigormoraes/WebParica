@@ -10,13 +10,16 @@
         <div class="col-lg-12 fonte" style="margin-top: 25px">
             <div class="col-lg-12">
                 <div class="panel panel-default">
-                    <div class="panel-heading">INFORMAÇÕES BÁSICAS SOBRE O SISTEMA ACADÊMICO - PARICÁ</div>
+                    <div class="panel-heading"><h4>INFORMAÇÕES BÁSICAS SOBRE O SISTEMA ACADÊMICO - PARICÁ</h4></div>
                         <div class="panel-body">
                             <div class="col-md-12">
-                            <span style="font-size: 13px !important; ">
-                                <p>I - Desenvolvido por alunos do curso de Engenharia da Computação, sem fins lucrativos, nem mesmo econômicas;</p>
-                                <p>II - Desenvolvido por alunos do curso de Engenharia da Computação, sem fins lucrativos, nem mesmo econômicas;</p>
-                            </span>
+                                <p>I - Pensado e projetado por alunos do 5º período, do curso de Engenharia da Computação do Centro Universitário do Norte - UniNorte Laureate;</p>
+                                <p>II - Movido a partir de ação solidária, meramente com intuito socioeducacional;</p>
+                                <p>III - Sem fins lucrativos e/ou econômicos;</p>
+                                <p>IV - Desenvolvido como projeto de extensão da componente curricular <i>Desenvolvimento Humano Social</i>;</p>
+                                <p>V - Intuito principal foi atualização da metodologia no processo de manipulação de informações escolares;</p>
+                                <p>VI - Pensando em agilizar e gerar segurança no manuseiro das informações acadêmicas;</p>
+                                <p>VII - ;</p>
                             </div>
                         </div>
                 </div>
