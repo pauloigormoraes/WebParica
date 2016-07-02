@@ -121,6 +121,19 @@ class ajax{
         $db->insert();
     }
 
+    protected function atualizarTurma(){
+        $dados = $this->json;
+        $db = new db_turma();
+        $model = $db->model;
+
+        $model->setId($dados->id);
+        $model->setNome($dados->turma_nome);
+        $model->setTurno($dados->turma_turno);
+        $model->setAno($dados->turma_ano);
+
+        $db->update();
+    }
+
     protected function cadastrarColaborador(){
         $dados = $this->json;
         $db = new db_colaborador();
