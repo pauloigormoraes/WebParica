@@ -248,8 +248,11 @@
 				<div class="panel panel-default">
 					<div class="panel-heading">Boletim</div>
 					<div class="panel-body">
-						<div class="form-group col-md-12">
-							<label>Matéria 1</label>
+						<label>Matéria 1</label>
+						<div class="form-group col-md-3">
+							<input name="numero" class="form-control" type="number" required>
+						</div>
+						<div class="form-group col-md-3">
 							<input name="numero" class="form-control" type="number" required>
 						</div>
 					</div>
