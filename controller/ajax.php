@@ -7,6 +7,7 @@ include "../model/dao/db_cargo.php";
 include "../model/dao/db_colaborador.php";
 include "../model/dao/db_turma.php";
 include "../model/dao/db_materia.php";
+include "../model/dao/db_boletim.php";
 
 class ajax{
     protected $json;
@@ -240,6 +241,42 @@ class ajax{
         $model->setNome($dados->ma_nome);
         $model->setTurmaId($dados->ma_tu_id);
         $model->setColaboradorId($dados->ma_co_id);
+
+        $db->update();
+    }
+
+    protected function listarBoletim(){
+        $dados = $this->json;
+        $db = new db_boletim();
+        $model = $db->model;
+
+        $model->setAlunoId($dados->id);
+        header('Content-Type: application/json');
+        $db->listBy();
+    }
+
+    protected function cadastrarBoletim(){
+        $dados = $this->json;
+        $db = new db_boletim();
+        $model = $db->model;
+
+        $model->setMateriaId($dados->materia_id);
+        $model->setAlunoId($dados->id_al);
+        $model->setNotas($dados->n1, $dados->n2, $dados->n3, $dados->n4);
+        $model->setFaltas($dados->f1, $dados->f2, $dados->f3, $dados->f4);
+
+        $db->insert();
+    }
+
+    protected function atualizarBoletim(){
+        $dados = $this->json;
+        $db = new db_boletim();
+        $model = $db->model;
+
+        $model->setMateriaId($dados->materia_id);
+        $model->setAlunoId($dados->id_al);
+        $model->setNotas($dados->n1, $dados->n2, $dados->n3, $dados->n4);
+        $model->setFaltas($dados->f1, $dados->f2, $dados->f3, $dados->f4);
 
         $db->update();
     }

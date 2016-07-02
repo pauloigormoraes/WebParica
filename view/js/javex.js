@@ -325,9 +325,42 @@ $(window).ready(function(){
                                         }, error: function(){
                                             $('select[name="turma_id"]').html("<option value='' disabled selected>Erro ao carregar cargos</option>");
                                         }
-                                    })
-                                    
-                                    
+                                    });
+
+                                    $.ajax({
+                                        url: "request/listarBoletim",
+                                        data: {'id': line.al_id},
+                                        method: "POST",
+                                        success: function(result){
+                                            model = "<option value='' disabled selected>Selecione uma matéria</option>";
+                                            $(result).each(function(){
+                                                var json = $(this)[0];
+                                                model += "<option value='"+json.ma_id+"'>"+json.ma_nome+" --- Professor(a): "+json.co_nome+" | Turma: "+json.tu_nome+"</option>";
+                                            });
+                                            $('select[name="materia_id"]').html(model);
+                                            $('select[name="materia_id"]').change(function(){
+                                                $(result).each(function(){
+                                                    var json = $(this)[0];
+                                                    if(json.ma_id == $('select[name="materia_id"]').val()){
+                                                        $("#bo_nome").html(json.ma_nome);
+                                                        $('input[name="bo_id"]').val(json.bo_id)
+                                                        $('input[name="n1"]').val(json.bo_n1);
+                                                        $('input[name="n2"]').val(json.bo_n2);
+                                                        $('input[name="n3"]').val(json.bo_n3);
+                                                        $('input[name="n4"]').val(json.bo_n4);
+                                                        $('input[name="f1"]').val(json.bo_f1);
+                                                        $('input[name="f2"]').val(json.bo_f2);
+                                                        $('input[name="f3"]').val(json.bo_f3);
+                                                        $('input[name="f4"]').val(json.bo_f4);
+                                                        $('input[name="nf"]').val((parseFloat(json.bo_n1) + parseFloat(json.bo_n2) + parseFloat(json.bo_n3) + parseFloat(json.bo_n4))/4);
+                                                        $('input[name="ff"]').val(parseInt(json.bo_f1) + parseInt(json.bo_f2) + parseInt(json.bo_f3) + parseInt(json.bo_f4));
+
+                                                    }
+                                                });
+                                            });
+
+                                        }
+                                    });
                                     
                                     $("#ddpessoais").submit(function(){
                                         ajaxCall("atualizarAlunos", $(this).serialize());
@@ -336,8 +369,14 @@ $(window).ready(function(){
                                         ajaxCall("atualizarContato", $(this).serialize());
                                     });
                                     $("#boletimform").submit(function(){
-                                        ajaxCall("up", $(this).serialize());
+                                        data = $(this).serialize();
+                                        if($('input[name="bo_id"]').val() == ""){
+                                            ajaxCall("cadastrarBoletim", $(this).serialize());
+                                        }else{
+                                            ajaxCall("atualizarBoletim", $(this).serialize());
+                                        }
                                     });
+
                                 });
                             });
                         }

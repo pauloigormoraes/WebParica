@@ -1,9 +1,8 @@
 <?php
 
 class boletim{
-
     private $bo_id;
-    private $bo_n1 = 1;
+    private $bo_n1;
     private $bo_n2;
     private $bo_n3;
     private $bo_n4;
@@ -18,14 +17,14 @@ class boletim{
         $this->bo_id = $id;
         return $this;
     }
-    public function setNotas($n1, $n2, $n3, $n4){ //Put 'null' (without '') in the variables tha you won't use
+    public function setNotas($n1=0, $n2=0, $n3=0, $n4=0){ //Put 'null' (without '') in the variables tha you won't use
         if(!is_null($n1)) $this->bo_n1 = $n1;
         if(!is_null($n2)) $this->bo_n2 = $n2;
         if(!is_null($n3)) $this->bo_n3 = $n3;
         if(!is_null($n4)) $this->bo_n4 = $n4;
         return $this;
     }
-    public function setFaltas($f1, $f2, $f3, $f4){
+    public function setFaltas($f1=0, $f2=0, $f3=0, $f4=0){
         if($f1) $this->bo_f1 = $f1;
         if($f2) $this->bo_f2 = $f2;
         if($f3) $this->bo_f3 = $f3;
@@ -39,7 +38,6 @@ class boletim{
         $this->bo_al_id = $id;
         return $this;
     }
-
     public function getId(){
         return $this->bo_id;
     }
@@ -65,14 +63,15 @@ class boletim{
         );
         return floatval($faltas[$bimestre]);
     }
+    public function getFaltasTotal(){
+        return $this->bo_f1 + $this->bo_f2 + $this->bo_f3 + $this->bo_f4;
+    }
     public function getMateriaId(){
         return $this->bo_ma_id;
     }
     public function getAlunoId(){
         return $this->bo_al_id;
     }
-    
 }
-
 
 ?>

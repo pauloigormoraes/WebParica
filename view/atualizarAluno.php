@@ -264,6 +264,8 @@
 				<div class="panel-heading">Boletim</div>
 				<div class="panel-body">
 
+					<input type="hidden" name="bo_id">
+					<input type="hidden" name="id_al">
 					<select class="form-control" name="materia_id"></select>
 					<br>
 					<table class="table table-striped table-bordered" width="100%">
@@ -282,24 +284,24 @@
 						<tr>
 							<td id="bo_nome">dsf</td>
 							<td>
-								Nota: <input name="n1"  class="form-control" style="width: 80px; display: inline-block" type="number"><br>
-								Faltas: <input name="f1" class="form-control" style="width: 80px; display: inline-block" type="number">
+								Nota: <input name="n1" min="0" max="10" required  class="form-control" style="width: 80px; display: inline-block" type="text"><br>
+								Faltas: <input name="f1" required class="form-control" style="width: 80px; display: inline-block" type="text">
 							</td>
 							<td>
-								Nota: <input name="n2"  class="form-control" style="width: 80px; display: inline-block" type="number"><br>
-								Faltas: <input name="f2" class="form-control" style="width: 80px; display: inline-block" type="number">
+								Nota: <input name="n2" min="0" max="10" required  class="form-control" style="width: 80px; display: inline-block" type="text"><br>
+								Faltas: <input name="f2" required class="form-control" style="width: 80px; display: inline-block" type="text">
 							</td>
 							<td>
-								Nota: <input name="n3"  class="form-control" style="width: 80px; display: inline-block" type="number"><br>
-								Faltas: <input name="f3" class="form-control" style="width: 80px; display: inline-block" type="number">
+								Nota: <input name="n3" min="0" max="10" required  class="form-control" style="width: 80px; display: inline-block" type="text"><br>
+								Faltas: <input name="f3" required class="form-control" style="width: 80px; display: inline-block" type="text">
 							</td>
 							<td>
-								Nota: <input name="n4"  class="form-control" style="width: 80px; display: inline-block" type="number"><br>
-								Faltas: <input name="f4" class="form-control" style="width: 80px; display: inline-block" type="number">
+								Nota: <input name="n4" min="0" max="10" required  class="form-control" style="width: 80px; display: inline-block" type="text"><br>
+								Faltas: <input name="f4" required class="form-control" style="width: 80px; display: inline-block" type="text">
 							</td>
 							<td>
-								Nota: <input name="nf" disabled  class="form-control" style="width: 80px; display: inline-block" type="number"><br>
-								Faltas: <input name="ff" disabled class="form-control" style="width: 80px; display: inline-block" type="number">
+								Nota: <input name="nf" min="0" max="10" disabled  class="form-control" style="width: 80px; display: inline-block" type="text"><br>
+								Faltas: <input name="ff" disabled class="form-control" style="width: 80px; display: inline-block" type="text">
 							</td>
 						</tr>
 						</tbody>
