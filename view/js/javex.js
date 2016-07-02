@@ -117,7 +117,8 @@ $(window).ready(function(){
                             $("table tbody tr").click(function(){
                                 var line = result[$(this).attr("i")];
                                 showPage("atualizarAluno", function(){
-                                    //...
+                                    //$('input[name="id"]').val(line.ca_id);
+                                    $('input[name="nome_aluno"]').val(line);
                                 });
                             });
                         }
