@@ -118,7 +118,49 @@ $(window).ready(function(){
                                 var line = result[$(this).attr("i")];
                                 showPage("atualizarAluno", function(){
                                     //$('input[name="id"]').val(line.ca_id);
-                                    $('input[name="nome_aluno"]').val(line);
+                                    $('input[name="nome_aluno"]').val(line.al_nome_aluno);
+                                    $('input[name="naturalidade"]').val(line.al_naturalidade);
+                                    $('input[name="nacionalidade"]').val(line.al_nacionalidade);
+                                    $('input[name="cpf_aluno"]').val(line.al_cpf_aluno);
+                                    $('input[name="rg_aluno"]').val(line.al_rg_aluno);
+                                    $('input[name="orgExp"]').val(line.al_orgExp);
+                                    $('input[name="dt_nasc"]').val(line.al_dt_nasc);
+                                    $('select[name="estadoCivil"] option').each(function(){
+                                        if($(this).val() == line.al_estadoCivil){
+                                            $(this).attr("selected","selected");
+                                        }
+                                    });
+                                    $('select[name="pcd"] option').each(function(){
+                                        if($(this).val() == line.al_pcd){
+                                            $(this).attr("selected","selected");
+                                        }
+                                    });
+                                    $('input[name="cert_nasc"]').val(line.al_cert_nasc);
+                                    $('input[name="nome_mae"]').val(line.al_nome_mae);
+                                    $('input[name="cpf_mae"]').val(line.al_cpf_mae);
+                                    $('input[name="rg_mae"]').val(line.al_rg_mae);
+                                    $('input[name="nome_pai"]').val(line.al_nome_pai);
+                                    $('input[name="cpf_pai"]').val(line.al_cpf_pai);
+                                    $('input[name="rg_pai"]').val(line.al_rg_pai);
+                                    $('select[name="situacao"] option').each(function(){
+                                        if($(this).val() == line.al_situacao){
+                                            $(this).attr("selected", "selected");
+                                        }
+                                    });
+                                    $('input[name="obs"]').val(line.al_obs);
+
+                                    $('input[name="lagradouro"]').val(line.ct_lagradouro);
+                                    $('input[name="numero"]').val(line.ct_numero);
+                                    $('input[name="bairro"]').val(line.ct_bairro);
+                                    $('input[name="cidade"]').val(line.ct_cidade);
+                                    $('select[name="estado"] option').each(function(){
+                                        if($(this).val() == line.ct_estado.toUpperCase()){
+                                            $(this).attr("selected", "selected");
+                                        }
+                                    });
+                                    $('input[name="tel_1"]').val(line.ct_tel_1);
+                                    $('input[name="tel_2"]').val(line.ct_tel_2);
+                                    $('input[name="email"]').val(line.ct_email);
                                 });
                             });
                         }
