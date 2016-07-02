@@ -16,8 +16,6 @@ SET
 	al_nacionalidade = :nacionalidade,
 	al_obs = :obs,
 	al_dt_nasc = :dt_nasc,
-	al_dt_matricula = :dt_matricula,
-	al_ct_id = :ct_id,
 	al_orgExp = :orgExp,
 	al_situacao = :situacao,
 	al_estadoCivil = :estadoCivil
