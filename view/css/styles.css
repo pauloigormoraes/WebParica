@@ -6,10 +6,6 @@ Version 1.0
 
 /*Global Styles*/
 
-*{
-	outline: none;
-}
-
 body {
 	background: #f1f4f7;
 	padding-top: 50px;
@@ -408,7 +404,12 @@ a.bg-danger:hover {
 }
 
 .fonte {
-	font-family: Raleway !important;
+	font-family: "Moraes" !important;
+}
+
+@font-face {
+	font-family: Moraes;
+	src: url("../fonts/Raleway-Light.ttf");
 }
 
 .widget-right {
