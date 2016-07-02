@@ -19,24 +19,22 @@
 				<div class="col-md-12">
 					<form id="inserirMateria" onsubmit="return false">
 
+						<input name="id" type="hidden" value="0">
+
 						<div class="form-group col-md-4">
 							<label>Disciplina</label>
 							<input name="ma_nome" class="form-control" type="text">
 						</div>
 
 						<div class="form-group col-md-4">
-							<label>Salário</label>
-							<input name="cargo_salario" class="form-control" type="text">
+							<label>Professor</label>
+							<select name="ma_co_id" class="form-control">
+							</select>
 						</div>
 
 						<div class="form-group col-md-4">
-							<label>Turno</label>
-							<select name="cargo_turno" class="form-control">
-								<option value="" disabled selected>Selecione</option>
-								<option value="0">Matutino</option>
-								<option value="1">Vespertino</option>
-								<option value="2">Noturno</option>
-								<option value="3">Diúrno</option>
+							<label>Turma</label>
+							<select name="ma_tu_id" class="form-control">
 							</select>
 						</div>
 

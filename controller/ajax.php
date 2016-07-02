@@ -6,6 +6,7 @@ include "../model/dao/db_aluno.php";
 include "../model/dao/db_cargo.php";
 include "../model/dao/db_colaborador.php";
 include "../model/dao/db_turma.php";
+include "../model/dao/db_materia.php";
 
 class ajax{
     protected $json;
@@ -165,7 +166,38 @@ class ajax{
         $db = new db_colaborador();
         header('Content-Type: application/json');
         $db->show();
-    }    
+    }
+
+    protected function cadastrarMateria(){
+        $dados = $this->json;
+        $db = new db_materia();
+        $model = $db->model;
+
+        $model->setNome($dados->ma_nome);
+        $model->setTurmaId($dados->ma_tu_id);
+        $model->setColaboradorId($dados->ma_co_id);
+
+        $db->insert();
+    }
+
+    protected function listarMateria(){
+        $db = new db_materia();
+        header('Content-Type: application/json');
+        $db->show();
+    }
+
+    protected function atualizarMateria(){
+        $dados = $this->json;
+        $db = new db_materia();
+        $model = $db->model;
+
+        $model->setId($dados->id);
+        $model->setNome($dados->ma_nome);
+        $model->setTurmaId($dados->ma_tu_id);
+        $model->setColaboradorId($dados->ma_co_id);
+
+        $db->update();
+    }
     
 }
 

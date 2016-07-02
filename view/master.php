@@ -56,7 +56,7 @@
         <!--li><a href="#buscar"><svg class="glyph stroked table"><use xlink:href="#stroked-table"></use></svg> Buscar aluno</a></li-->
         <li><a href="#cadastrogeral"><svg class="glyph stroked pencil"><use xlink:href="#stroked-pencil"></use></svg> Cadastro Geral</a></li>
         <li><a href="#listagemgeral"><svg class="glyph stroked open-folder"><use xlink:href="#stroked-open-folder"></use></svg> Listagem Geral</a></li>
-        <li><a href="#atualizarAluno"><svg class="glyph stroked table"><use xlink:href="#stroked-clipboard-with-paper"></use></svg> Atualiza Usuario [Teste]</a></li>
+        <!--li><a href="#atualizarAluno"><svg class="glyph stroked table"><use xlink:href="#stroked-clipboard-with-paper"></use></svg> Atualiza Usuario [Teste]</a></li-->
         <li role="presentation" class="divider"></li>
     </ul>
 

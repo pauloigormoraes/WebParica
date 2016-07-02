@@ -112,8 +112,101 @@ $(window).ready(function(){
 
             case 'materia':
                 showPage(link, function(){
+                    $.ajax({url: "request/listarColaborador",
+                        beforeSend: function(){
+                            $('select[name="ma_co_id"]').html("<option value='' disabled selected>Carregando...</option>");
+                        }, success: function(result){
+                            var model = "<option value='' disabled selected>Selecione</option>";
+                            $(result).each(function(){
+                                var json = $(this)[0];
+                                model += "<option value='"+json.co_id+"'>"+json.co_nome+"</option>";
+                            });
+                            $('select[name="ma_co_id"]').html(model);
+                        }, error: function(){
+                            $('select[name="ma_co_id"]').html("<option value='' disabled selected>Erro ao carregar cargos</option>");
+                        }
+                    })
+                    $.ajax({url: "request/listarTurma",
+                        beforeSend: function(){
+                            $('select[name="ma_tu_id"]').html("<option value='' disabled selected>Carregando...</option>");
+                        }, success: function(result){
+                            var model = "<option value='' disabled selected>Selecione</option>";
+                            $(result).each(function(){
+                                var json = $(this)[0];
+                                model += "<option value='"+json.tu_id+"'>"+json.tu_nome+"</option>";
+                            });
+                            $('select[name="ma_tu_id"]').html(model);
+                        }, error: function(){
+                            $('select[name="ma_tu_id"]').html("<option value='' disabled selected>Erro ao carregar cargos</option>");
+                        }
+                    });
                     $("#inserirMateria").submit(function(){
-                        ajaxCall("cadastrarTurma", $(this).serialize());
+                        ajaxCall("cadastrarMateria", $(this).serialize());
+                    });
+                });
+                break;
+
+            case 'listMaterias':
+                showPage(link, function() {
+                    $.ajax({
+                        url: "request/listarMateria",
+                        success: function (result) {
+                            var model = "";
+                            $(result).each(function (index) {
+                                var json = $(this)[0];
+                                model += "<tr i='" + index + "'><td>" + json.ma_id + "</td><td>" + json.ma_nome + "</td><td>" + json.co_nome + "</td><td>" + json.tu_nome + "</td></tr>";
+                            });
+                            $("table tbody").html(model);
+                            table("table");
+                            $("table tbody tr").click(function(){
+                                var line = result[$(this).attr("i")];
+                                showPage("materia", function(){
+
+                                    $(".panel-heading").html("Atualizar Matéria");
+                                    $(".btn").html("Salvar Alterações");
+                                    $('input[name="id"]').val(line.ma_id);
+                                    $('input[name="ma_nome"]').val(line.ma_nome);
+                                    $.ajax({url: "request/listarColaborador",
+                                        beforeSend: function(){
+                                            $('select[name="ma_co_id"]').html("<option value='' disabled selected>Carregando...</option>");
+                                        }, success: function(result){
+                                            var model = "";
+                                            $(result).each(function(){
+                                                var json = $(this)[0]; //line.cargo_ca_id == json.ca_id
+                                                if(line.ma_co_id == json.co_id)
+                                                    model += "<option value='"+json.co_id+"' selected>"+json.co_nome+"</option>";
+                                                else
+                                                    model += "<option value='"+json.co_id+"'>"+json.co_nome+"</option>";
+                                            });
+                                            $('select[name="ma_co_id"]').html(model);
+                                        }, error: function(){
+                                            $('select[name="ma_co_id"]').html("<option value='' disabled selected>Erro ao carregar cargos</option>");
+                                        }
+                                    })
+                                    $.ajax({url: "request/listarTurma",
+                                        beforeSend: function(){
+                                            $('select[name="ma_tu_id"]').html("<option value='' disabled selected>Carregando...</option>");
+                                        }, success: function(result){
+                                            var model = "";
+                                            $(result).each(function(){
+                                                var json = $(this)[0];
+                                                if(json.tu_id == line.ma_tu_id)
+                                                    model += "<option value='"+json.tu_id+"' selected>"+json.tu_nome+"</option>";
+                                                else
+                                                    model += "<option value='"+json.tu_id+"'>"+json.tu_nome+"</option>";
+                                            });
+                                            $('select[name="ma_tu_id"]').html(model);
+                                        }, error: function(){
+                                            $('select[name="ma_tu_id"]').html("<option value='' disabled selected>Erro ao carregar cargos</option>");
+                                        }
+                                    });
+
+                                    $("#inserirMateria").submit(function(){
+                                        ajaxCall("atualizarMateria", $(this).serialize());
+                                    });
+                                });
+                            });
+                        }
                     });
                 });
                 break;
@@ -199,7 +292,8 @@ $(window).ready(function(){
                                             $(this).attr("selected", "selected");
                                         }
                                     });
-                                    $('input[name="obs"]').val(line.al_obs);
+                                    
+                                    $('textarea[name="obs"]').val(line.al_obs);
 
                                     $('input[name="lagradouro"]').val(line.ct_lagradouro);
                                     $('input[name="numero"]').val(line.ct_numero);
