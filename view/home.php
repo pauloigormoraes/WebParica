@@ -9,7 +9,7 @@
 		<div class="row fonte" style="text-align: center;">
 			<div class="col-lg-12" style="margin-top: 120px">
 				<img src='view/img/leafa.png'>
-				<h1 style="color: #91DC5A !important; text-shadow: 10px 10px 10px #99FF99;">
+				<h1 style="color: #91DC5A !important; /*text-shadow: 10px 10px 10px #99FF99;*/">
 					<b>Bem vindo(a) ao Sistema Acadêmico - PARICÁ</b></h1>
 			</div>
 		</div>
