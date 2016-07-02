@@ -44,6 +44,8 @@
             <a class="navbar-brand" href="#home">
                 <img style="margin: 0 0 0 0" src='view/img/favicon.png'> | 
                 <span>SISTEMA ACADÊMICO </span>PARICÁ</a>
+            <a class="navbar-brand" href="#info" title="Saiba mais sobre o projeto" style="float: right !important;">SOBRE
+                <span>PARICÁ</span></a>
         </div>
 
     </div>
@@ -58,6 +60,7 @@
         <li><a href="#listagemgeral"><svg class="glyph stroked open-folder"><use xlink:href="#stroked-open-folder"></use></svg> Listagem Geral</a></li>
         <!--li><a href="#atualizarAluno"><svg class="glyph stroked table"><use xlink:href="#stroked-clipboard-with-paper"></use></svg> Atualiza Usuario [Teste]</a></li-->
         <li role="presentation" class="divider"></li>
+        <li style="margin-top: 160%; align: center;"><a href="#info" class="glyphicon glyphicon-info-sign"><b class="fonte"> SOBRE O SISTEMA PARICÁ</b></a></li>
     </ul>
 
 </div>
