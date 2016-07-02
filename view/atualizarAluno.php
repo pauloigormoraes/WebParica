@@ -248,9 +248,46 @@
 				<div class="panel panel-default">
 					<div class="panel-heading">Boletim</div>
 					<div class="panel-body">
-						<div class="form-group col-md-12">
-							<label>Matéria 1</label>
-							<input name="numero" class="form-control" type="number" required>
+						<label>Matéria</label>
+						<div class="col-md-12">
+							<div class="form-group col-md-2">
+								<input name="bo_n1" class="form-control" type="number" required>
+							</div>
+							<div class="form-group col-md-2">
+								<input name="bo_n2" class="form-control" type="number" required>
+							</div>
+							<div class="form-group col-md-2">
+								<input name="bo_n3" class="form-control" type="number" required>
+							</div>
+							<div class="form-group col-md-2">
+								<input name="bo_n4" class="form-control" type="number" required>
+							</div>
+							<div class="form-group col-md-2">
+								<p style="margin: 10px 10px 10px 20px"><b>Média Final</b></p>
+							</div>
+							<div class="form-group col-md-2">
+								<input name="bo_nmd" disabled selected class="form-control" type="number" required>
+							</div>
+						</div>
+						<div class="col-md-12">
+							<div class="form-group col-md-2">
+								<input name="bo_f1" class="form-control" type="number" required>
+							</div>
+							<div class="form-group col-md-2">
+								<input name="bo_f2" class="form-control" type="number" required>
+							</div>
+							<div class="form-group col-md-2">
+								<input name="bo_f3" class="form-control" type="number" required>
+							</div>
+							<div class="form-group col-md-2">
+								<input name="bo_f4" class="form-control" type="number" required>
+							</div>
+							<div class="form-group col-md-2">
+								<p style="margin: 10px 10px 10px 20px"><b>Total de Faltas</b></p>
+							</div>
+							<div class="form-group col-md-2">
+								<input name="bo_ft" disabled selected class="form-control" type="number" required>
+							</div>
 						</div>
 					</div>
 				</div>
