@@ -112,8 +112,36 @@ $(window).ready(function(){
 
             case 'materia':
                 showPage(link, function(){
+                    $.ajax({url: "request/listarColaborador",
+                        beforeSend: function(){
+                            $('select[name="ma_co_id"]').html("<option value='' disabled selected>Carregando...</option>");
+                        }, success: function(result){
+                            var model = "<option value='' disabled selected>Selecione</option>";
+                            $(result).each(function(){
+                                var json = $(this)[0];
+                                model += "<option value='"+json.co_id+"'>"+json.co_nome+"</option>";
+                            });
+                            $('select[name="ma_co_id"]').html(model);
+                        }, error: function(){
+                            $('select[name="ma_co_id"]').html("<option value='' disabled selected>Erro ao carregar cargos</option>");
+                        }
+                    })
+                    $.ajax({url: "request/listarTurma",
+                        beforeSend: function(){
+                            $('select[name="ma_tu_id"]').html("<option value='' disabled selected>Carregando...</option>");
+                        }, success: function(result){
+                            var model = "<option value='' disabled selected>Selecione</option>";
+                            $(result).each(function(){
+                                var json = $(this)[0];
+                                model += "<option value='"+json.tu_id+"'>"+json.tu_nome+"</option>";
+                            });
+                            $('select[name="ma_tu_id"]').html(model);
+                        }, error: function(){
+                            $('select[name="ma_tu_id"]').html("<option value='' disabled selected>Erro ao carregar cargos</option>");
+                        }
+                    });
                     $("#inserirMateria").submit(function(){
-                        ajaxCall("cadastrarTurma", $(this).serialize());
+                        ajaxCall("cadastrarMateria", $(this).serialize());
                     });
                 });
                 break;

@@ -6,6 +6,7 @@ include "../model/dao/db_aluno.php";
 include "../model/dao/db_cargo.php";
 include "../model/dao/db_colaborador.php";
 include "../model/dao/db_turma.php";
+include "../model/dao/db_materia.php";
 
 class ajax{
     protected $json;
@@ -165,6 +166,18 @@ class ajax{
         $db = new db_colaborador();
         header('Content-Type: application/json');
         $db->show();
+    }
+
+    protected function cadastrarMateria(){
+        $dados = $this->json;
+        $db = new db_materia();
+        $model = $db->model;
+
+        $model->setNome($dados->cargo_nome);
+        $model->setSalario($dados->cargo_salario);
+        $model->setTurno($dados->cargo_turno);
+
+        $db->insert();
     }    
     
 }

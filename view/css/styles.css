@@ -601,7 +601,7 @@ a.bg-danger:hover {
 .sidebar ul.nav .active > a:focus, .sidebar ul.nav li.parent a.active:focus {
 	color: #fff;
 	background-color: #91DC5A;
-}*/
+}
 
 .sidebar ul.nav ul,
 .sidebar ul.nav ul li {
