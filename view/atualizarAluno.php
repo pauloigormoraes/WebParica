@@ -144,7 +144,7 @@
 
 			<div class="tab-pane" id="end">
 				<div class="panel panel-default">
-					<div class="panel-heading">Dados para contato</div>
+					<div class="panel-heading">Endereço</div>
 					<div class="panel-body">
 						<div class="col-md-12">
 							<div class="form-group col-md-7">
@@ -228,7 +228,7 @@
 
 			<div class="tab-pane" id="turma">
 				<div class="panel panel-default">
-					<div class="panel-heading">Dados para contato</div>
+					<div class="panel-heading">Turma</div>
 					<div class="panel-body">
 						<div class="form-group col-md-12">
 							<label>Turma</label>
@@ -245,8 +245,20 @@
 				</div>
 			</div>
 			<div class="tab-pane" id="boletim">
-				<h1>Green</h1>
-				<p>green green green green green</p>
+				<div class="panel panel-default">
+					<div class="panel-heading">Boletim</div>
+					<div class="panel-body">
+						<div class="form-group col-md-12">
+							<label>Matéria 1</label>
+							<input name="numero" class="form-control" type="number" required>
+						</div>
+					</div>
+				</div>
+				<div class="panel panel-default col-md-12">
+					<div class="panel-body">
+						<button type="submit" style="float: right;" class="btn btn-primary glyphicon glyphicon-ok-circle"><b class="fonte">   SALVAR</b></button>
+					</div>
+				</div>
 			</div>
 
 		</div>
@@ -257,8 +269,4 @@
 			$('#tabs').tab();
 		});
 	</script>
-
-
-<script type="text/javascript" src="../bootstrap/js/bootstrap.js"></script>
-
 
