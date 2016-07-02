@@ -110,6 +110,14 @@ $(window).ready(function(){
                 });
                 break;
 
+            case 'materia':
+                showPage(link, function(){
+                    $("#inserirMateria").submit(function(){
+                        ajaxCall("cadastrarTurma", $(this).serialize());
+                    });
+                });
+                break;
+
             case 'listTurmas':
                 showPage(link, function() {
                     $.ajax({

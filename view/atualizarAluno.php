@@ -232,7 +232,7 @@
 					<div class="panel-body">
 						<div class="form-group col-md-12">
 							<label>Turma</label>
-							<select name="estado" class="form-control" required>
+							<select name="turma" class="form-control" required>
 								<option value="" disabled selected>Selecione</option>
 							</select>
 						</div>
