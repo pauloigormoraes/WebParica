@@ -30,6 +30,30 @@ class db_contato extends connect{
             print $e->getMessage();
         }
     }
+
+    public function update(){
+        $this->query = $this->readQuery("updateContato");
+        $this->MySql->beginTransaction();
+        try {
+            $sql = $this->MySql->prepare($this->query);
+            $sql->bindValue(":id", $this->model->getId());
+            $sql->bindValue(":lagradouro", $this->model->getLagradouro());
+            $sql->bindValue(":numero", $this->model->getNumero());
+            $sql->bindValue(":bairro", $this->model->getBairro());
+            $sql->bindValue(":cidade", $this->model->getCidade());
+            $sql->bindValue(":estado", $this->model->getEstado());
+            $sql->bindValue(":email", $this->model->getEmail());
+            $sql->bindValue(":tel_1", $this->model->getTel1());
+            $sql->bindValue(":tel_2", $this->model->getTel2());
+
+            $sql->execute();
+            $this->MySql->commit();
+            print 1;
+        } catch (Exception $e) {
+            print $e->getMessage();
+        }
+    }
+
     public function showLastOne(){
         $this->query = "SELECT ct_id FROM contato ORDER BY ct_id DESC LIMIT 1";
         try{

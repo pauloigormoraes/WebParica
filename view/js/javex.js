@@ -262,7 +262,8 @@ $(window).ready(function(){
                             $("table tbody tr").click(function(){
                                 var line = result[$(this).attr("i")];
                                 showPage("atualizarAluno", function(){
-                                    //$('input[name="id"]').val(line.ca_id);
+                                    $('input[name="id_al"]').val(line.al_id);
+                                    $('input[name="id_ct"]').val(line.ct_id);
                                     $('input[name="nome_aluno"]').val(line.al_nome_aluno);
                                     $('input[name="naturalidade"]').val(line.al_naturalidade);
                                     $('input[name="nacionalidade"]').val(line.al_nacionalidade);
@@ -307,6 +308,16 @@ $(window).ready(function(){
                                     $('input[name="tel_1"]').val(line.ct_tel_1);
                                     $('input[name="tel_2"]').val(line.ct_tel_2);
                                     $('input[name="email"]').val(line.ct_email);
+
+                                    $("#ddpessoais").submit(function(){
+                                        ajaxCall("atualizarAlunos", $(this).serialize());
+                                    });
+                                    $("#endereco").submit(function(){
+                                        ajaxCall("atualizarContato", $(this).serialize());
+                                    });
+                                    $("#turma").submit(function(){
+                                        ajaxCall("atualizarAlunoTurma", $(this).serialize());
+                                    });
                                 });
                             });
                         }
