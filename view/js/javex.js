@@ -5,7 +5,7 @@ $(window).ready(function(){
     }
 
     function error(msg){
-        $("#MainFrame").html("<div style='padding: 50px;'> <h1><b>Ajax Error</b></h1><br> <span style='font-size:1.4em'>" + msg + "</span> <br><br><br> Em caso de dúvidas, entre em contato com os desenvolvedores: <a href='http://www.allexlima.com'>Allex Lima - (92) 981914317</a> ou <a href='http://www.moraespaulo.com'>Paulo Moraes - (92) 994484599</a>.</div>");
+        $("#MainFrame").html("<div style='padding: 50px;'> <h1><b>Ajax Error</b></h1><br> <span style='font-size:1.4em'>" + msg + "</span> <br><br><br> Em caso de dúvidas, entre em contato com os desenvolvedores: <a href='http://www.allexlima.com'>Allex Lima</a> ou <a href='http://www.moraespaulo.com'>Paulo Moraes</a>.</div>");
     }
 
     function showPage(page, action){
