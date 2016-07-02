@@ -43,7 +43,7 @@
             </button>
             <a class="navbar-brand" href="#home">
                 <img style="margin: 0 0 0 0" src='view/img/favicon.png'> | 
-                <span>PARICÁ </span>SISTEMA ACADÊMICO</a>
+                <span>SISTEMA ACADÊMICO </span>PARICÁ</a>
         </div>
 
     </div>
