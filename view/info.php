@@ -17,9 +17,11 @@
                                 <p>II - Movido a partir de ação solidária, meramente com intuito socioeducacional;</p>
                                 <p>III - Sem fins lucrativos e/ou econômicos;</p>
                                 <p>IV - Desenvolvido como projeto de extensão da componente curricular <i>Desenvolvimento Humano Social</i>;</p>
-                                <p>V - Intuito principal foi atualização da metodologia no processo de manipulação de informações escolares;</p>
+                                <p>V - Intuito principal, foi atualização da metodologia no processo de manipulação de informações escolares;</p>
                                 <p>VI - Pensando em agilizar e gerar segurança no manuseiro das informações acadêmicas;</p>
-                                <p>VII - ;</p>
+                                <p>VII - Sem fins vinculados a órgãos governamentais, federais ou quaisquer outra forma de politicagem;</p>
+                                <p>VIII - Por não ter vínculo governamental, não se faz necessário a utilização de logos, logomarcas, logotipos ou qualquer outro meio de marketing ou merchandising ligados a politicagem;</p>
+                                <p>IX - Projeto sem contrapartida de manutenções após a entrega;</p>
                             </div>
                         </div>
                 </div>
