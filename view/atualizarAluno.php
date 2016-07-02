@@ -249,7 +249,7 @@
 		</form>
 	</div>
 	<div class="tab-pane" id="turma">
-		<form id="turma" onsubmit="return false">
+		<form id="turmaform" onsubmit="return false">
 			<div class="panel panel-default">
 				<div class="panel-heading">Turma</div>
 				<div class="panel-body">

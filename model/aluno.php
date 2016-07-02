@@ -21,7 +21,7 @@ class aluno{
     private $al_dt_nasc;
     private $al_dt_matricula;
     private $al_ct_id;
-    private $turma_tu_id;
+    private $al_tu_id;
     private $al_orgExp;
     private $al_situacao;
     private $al_estadoCivil;
@@ -103,7 +103,7 @@ class aluno{
         return $this;
     }
     public function setTurmaId($id){
-        $this->turma_tu_id = $id;
+        $this->al_tu_id = $id;
         return $this;
     }
     public function setOrgaoExpedidor($orgao){
@@ -175,6 +175,9 @@ class aluno{
     }
     public function getContactId(){
         return $this->al_ct_id;
+    }
+    public function getTurmaId(){
+        return $this->al_tu_id;
     }
     public function getOrgaoExpedidor(){
         return $this->al_orgExp;

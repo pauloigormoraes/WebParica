@@ -309,13 +309,32 @@ $(window).ready(function(){
                                     $('input[name="tel_2"]').val(line.ct_tel_2);
                                     $('input[name="email"]').val(line.ct_email);
 
+                                    $.ajax({url: "request/listarTurma",
+                                        beforeSend: function(){
+                                            $('select[name="turma_id"]').html("<option value='' disabled selected>Carregando...</option>");
+                                        }, success: function(result){
+                                            var model = "";
+                                            $(result).each(function(){
+                                                var json = $(this)[0];
+                                                model = "<option value='' disabled selected>Selecione</option>";
+                                                if(line.al_tu_id == json.tu_id)
+                                                    model += "<option value='"+json.tu_id+"' selected>"+json.tu_nome+" (VINCULADO)</option>";
+                                                else
+                                                    model += "<option value='"+json.tu_id+"'>"+json.tu_nome+"</option>";
+                                            });
+                                            $('select[name="turma_id"]').html(model);
+                                        }, error: function(){
+                                            $('select[name="turma_id"]').html("<option value='' disabled selected>Erro ao carregar cargos</option>");
+                                        }
+                                    })
+                                    
                                     $("#ddpessoais").submit(function(){
                                         ajaxCall("atualizarAlunos", $(this).serialize());
                                     });
                                     $("#endereco").submit(function(){
                                         ajaxCall("atualizarContato", $(this).serialize());
                                     });
-                                    $("#turma").submit(function(){
+                                    $("#turmaform").submit(function(){
                                         ajaxCall("atualizarAlunoTurma", $(this).serialize());
                                     });
                                 });
