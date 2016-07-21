@@ -9,7 +9,7 @@ class connect{
     protected $MySql;
 
     function __construct(){
-        $this->setSettings("root", "allex", "localhost", "parica_db");
+        $this->setSettings("root", "", "localhost", "parica_db");
 
         try{
             $this->MySql = new PDO("mysql:host={$this->host}; dbname={$this->schema}; charset=utf8", $this->username, $this->password);
